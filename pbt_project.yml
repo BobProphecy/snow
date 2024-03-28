@@ -1,0 +1,39 @@
+name: test
+description: ''
+version: 0.0.1
+author: null
+language: sql
+buildSystem: ''
+buildSystemDetails: null
+pipelines: {}
+datasets: {}
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: ''
+  gemLibsVersion: ''
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2024-03-28 13:57:47'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+subgraphs: {}
+sqlModels: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline:
+  name: sqlPipeline
+  description: null
+  author: bobw@prophecy.io
+  createdAt: '2024-03-28 13:57:47'
+dependencies: '[]'
+projectDependencies: {}
+flags:
+  shouldAddDefaultDependenciesIfAbsent: true
+pipelineConfigurations: {}
