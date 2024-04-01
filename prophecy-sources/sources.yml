@@ -1,0 +1,80 @@
+---
+version: 2
+sources:
+- name: "SNOWFLAKE_SAMPLE_DATA.TPCH_SF10"
+  database: "SNOWFLAKE_SAMPLE_DATA"
+  schema: "TPCH_SF10"
+  config:
+    enabled: true
+  tables:
+  - name: "CUSTOMER"
+    description: "This dataset is sourced from a SQL database and contains detailed\
+      \ information about customers, including their unique customer key, name, address,\
+      \ nation, phone number, account balance, market segment, and comments. This\
+      \ data is valuable for analyzing customer behavior, identifying market segments,\
+      \ and developing targeted marketing strategies. It can also be used to evaluate\
+      \ customer satisfaction and loyalty, as well as to track customer interactions\
+      \ and preferences over time."
+    columns:
+    - name: "C_CUSTKEY"
+      description: "A unique identifier assigned to each customer in the dataset.\
+        \ It stores numerical values in Number data type and provides a way to uniquely\
+        \ identify each customer in the dataset."
+      tags: []
+      dataType:
+        type: "Number"
+    - name: "C_NAME"
+      description: "Stores the full name of each customer. The values in this column\
+        \ are of string data type and provide a way to uniquely identify each customer.\
+        \ This column is a part of the CUSTOMER dataset, which contains information\
+        \ about customers including their contact details and account balances."
+      tags: []
+      dataType:
+        type: "String"
+    - name: "C_ADDRESS"
+      description: "Stores the physical address of each customer. The values in this\
+        \ column are of string data type and provide information about the location\
+        \ of each customer. This column can be used for geographical analysis or to\
+        \ identify customers in a specific area."
+      tags: []
+      dataType:
+        type: "String"
+    - name: "C_NATIONKEY"
+      description: "Represents the nation to which a customer belongs. It stores numerical\
+        \ values in Number data type, indicating the unique identifier of the nation.\
+        \ This column provides a way to group customers based on their nationality."
+      tags: []
+      dataType:
+        type: "Number"
+    - name: "C_PHONE"
+      description: "Stores the phone number of each customer. The values in this column\
+        \ are of string data type and provide a way to contact each customer. It is\
+        \ important to note that the format of the phone number may vary depending\
+        \ on the country or region of the customer."
+      tags: []
+      dataType:
+        type: "String"
+    - name: "C_ACCTBAL"
+      description: "This column stores the account balance of each customer. It contains\
+        \ numerical values in Number data type, indicating the current balance of\
+        \ each customer's account. This information can be used to analyze the financial\
+        \ status of individual customers."
+      tags: []
+      dataType:
+        type: "Number"
+    - name: "C_MKTSEGMENT"
+      description: "This column represents the market segment to which each customer\
+        \ belongs. It stores values of string data type and provides information about\
+        \ the target market for each customer. The values in this column can be used\
+        \ to analyze customer behavior and preferences based on their market segment."
+      tags: []
+      dataType:
+        type: "String"
+    - name: "C_COMMENT"
+      description: "This column stores additional comments or notes related to each\
+        \ customer. The values in this column are of string data type and may contain\
+        \ any relevant information about the customer, such as preferences, feedback,\
+        \ or other details that may be useful for analysis or customer service purposes."
+      tags: []
+      dataType:
+        type: "String"

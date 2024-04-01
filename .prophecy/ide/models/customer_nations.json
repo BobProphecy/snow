@@ -1,0 +1,625 @@
+{
+  "id" : "customer_nations",
+  "metainfo" : {
+    "label" : "customer_nations",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "customer_nations##MTALinzg" : {
+      "id" : "customer_nations##MTALinzg",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "customer_nations",
+        "x" : 240,
+        "y" : -160,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM OrderBy_1\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ZH8rOXxZ",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "NATION_KEY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "NATION_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "COUNT_CUSTOMER",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "OrderBy_1"
+        } ],
+        "outputs" : [ {
+          "id" : "vFyeAK26",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "NATION_KEY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "NATION_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "COUNT_CUSTOMER",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "7-njC-eNDmIl5XAkC6U44$$ZQyXGwKgzE4cbZdDHUXUp" : {
+      "id" : "7-njC-eNDmIl5XAkC6U44$$ZQyXGwKgzE4cbZdDHUXUp",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "nations_CUSTOMER",
+        "slug" : "nations_CUSTOMER",
+        "x" : -240,
+        "y" : -160,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "CUSTOMER",
+          "expression" : {
+            "expression" : "nations.n_nationkey=CUSTOMER.C_NATIONKEY"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "fQ9JWVVREdIkhUPOSW5H8$$D7LVGWgy9W2iEaGJRAxj8##n_nationkey", "-q9QFZxV09S0E0LhL08IG$$g8SRfTBBClBnQkSZ4WQxa##C_NATIONKEY" ],
+        "headAlias" : "nations"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "fQ9JWVVREdIkhUPOSW5H8$$D7LVGWgy9W2iEaGJRAxj8",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "n_nationkey",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "n_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "n_regionkey",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "n_comment",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "nations"
+        }, {
+          "id" : "-q9QFZxV09S0E0LhL08IG$$g8SRfTBBClBnQkSZ4WQxa",
+          "schema" : {
+            "providerType" : "snowflake",
+            "fields" : [ {
+              "name" : "C_CUSTKEY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_ADDRESS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_NATIONKEY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_PHONE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_ACCTBAL",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_MKTSEGMENT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_COMMENT",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "CUSTOMER"
+        } ],
+        "outputs" : [ {
+          "id" : "DIk9V47tC_mcnZxzmUS0C$$axaGhv1k1Qlzu4dWMKN-x",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "N_NATIONKEY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "N_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "N_REGIONKEY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "N_COMMENT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CUSTKEY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_ADDRESS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_NATIONKEY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_PHONE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_ACCTBAL",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_MKTSEGMENT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_COMMENT",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "qPhnIUH-KVubf1rx6zBXm" : {
+      "id" : "qPhnIUH-KVubf1rx6zBXm",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "CUSTOMER",
+        "slug" : "CUSTOMER",
+        "x" : -440,
+        "y" : -80,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "CUSTOMER",
+          "sourceType" : "Source",
+          "sourceName" : "SNOWFLAKE_SAMPLE_DATA.TPCH_SF10",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "5CK5rxE8gCtkDaRq0sIxH",
+          "schema" : {
+            "providerType" : "snowflake",
+            "fields" : [ {
+              "name" : "C_CUSTKEY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_ADDRESS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_NATIONKEY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_PHONE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_ACCTBAL",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_MKTSEGMENT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_COMMENT",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "THy6QhojSYBoZjuVco8Rn" : {
+      "id" : "THy6QhojSYBoZjuVco8Rn",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "nations",
+        "slug" : "nations",
+        "x" : -440,
+        "y" : -220,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "nations",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SXnNcuVZKzjNUZrIAlMUs",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "n_nationkey",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "n_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "n_regionkey",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "n_comment",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "6EADS5O6UIFEvuNgdBXiK$$YRTr64b3Qwz_xpLLLVXlT" : {
+      "id" : "6EADS5O6UIFEvuNgdBXiK$$YRTr64b3Qwz_xpLLLVXlT",
+      "component" : "OrderBy",
+      "metadata" : {
+        "label" : "OrderBy_1",
+        "slug" : "OrderBy_1",
+        "x" : 60,
+        "y" : -160,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ "rCpyctx9oPii0jxHKjToy$$H7fsNwbBQ8SYYN14J5zYK##COUNT_CUSTOMER" ],
+        "orders" : [ {
+          "expression" : {
+            "expression" : "COUNT_CUSTOMER"
+          },
+          "sortType" : "desc"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "rCpyctx9oPii0jxHKjToy$$H7fsNwbBQ8SYYN14J5zYK",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "NATION_KEY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "NATION_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "COUNT_CUSTOMER",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "7AO5QDSKPucKZCOmwXzUO$$Xfo3y-w3w3ltybmKaGcYe",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "NATION_KEY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "NATION_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "COUNT_CUSTOMER",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "AkIf5nVXSpkILJwDsxrc4$$0aYb5rPVn_AzH4LpBL84f" : {
+      "id" : "AkIf5nVXSpkILJwDsxrc4$$0aYb5rPVn_AzH4LpBL84f",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "Aggregate_1",
+        "slug" : "Aggregate_1",
+        "x" : -80,
+        "y" : -160,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "aggregate" : [ {
+          "expression" : {
+            "expression" : "any_value(N_NATIONKEY)"
+          },
+          "alias" : "nation_key"
+        }, {
+          "expression" : {
+            "expression" : "any_value(N_NAME)"
+          },
+          "alias" : "nation_name"
+        }, {
+          "expression" : {
+            "expression" : "COUNT(DISTINCT C_CUSTKEY)"
+          },
+          "alias" : "count_customer"
+        } ],
+        "allowSelection" : true,
+        "condition" : {
+          "expression" : ""
+        },
+        "activeTab" : "groupBy",
+        "columnsSelector" : [ "LfiWAFlZylK4PZmUmFu_n$$8m1SHQAQPG8MQ61U3Vzc8##N_NATIONKEY", "LfiWAFlZylK4PZmUmFu_n$$8m1SHQAQPG8MQ61U3Vzc8##N_NAME", "LfiWAFlZylK4PZmUmFu_n$$8m1SHQAQPG8MQ61U3Vzc8##C_CUSTKEY" ],
+        "groupBy" : [ {
+          "expression" : {
+            "expression" : "N_NATIONKEY"
+          }
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "LfiWAFlZylK4PZmUmFu_n$$8m1SHQAQPG8MQ61U3Vzc8",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "N_NATIONKEY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "N_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "N_REGIONKEY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "N_COMMENT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CUSTKEY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_ADDRESS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_NATIONKEY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_PHONE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_ACCTBAL",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_MKTSEGMENT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_COMMENT",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "nations_CUSTOMER"
+        } ],
+        "outputs" : [ {
+          "id" : "PRntO3JzLxNxLHi8lyZuB$$9W8hB8b_9s6jMNSuYThpO",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "NATION_KEY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "NATION_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "COUNT_CUSTOMER",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "0CGLECXhtaT8uf-YTWfRx$$ndNdgRDS6C6aRoYTakIH8",
+    "source" : "THy6QhojSYBoZjuVco8Rn",
+    "sourcePort" : "SXnNcuVZKzjNUZrIAlMUs",
+    "target" : "7-njC-eNDmIl5XAkC6U44$$ZQyXGwKgzE4cbZdDHUXUp",
+    "targetPort" : "fQ9JWVVREdIkhUPOSW5H8$$D7LVGWgy9W2iEaGJRAxj8"
+  }, {
+    "id" : "q2CcXIXnr7CMlr0LEfOsT$$HlxtWvAFbZUrj3WLeFRiq",
+    "source" : "qPhnIUH-KVubf1rx6zBXm",
+    "sourcePort" : "5CK5rxE8gCtkDaRq0sIxH",
+    "target" : "7-njC-eNDmIl5XAkC6U44$$ZQyXGwKgzE4cbZdDHUXUp",
+    "targetPort" : "-q9QFZxV09S0E0LhL08IG$$g8SRfTBBClBnQkSZ4WQxa"
+  }, {
+    "id" : "smluQKOKOSPNm0r79dtiy$$QwpkFI-T4ZZ0fKx69S09Z",
+    "source" : "7-njC-eNDmIl5XAkC6U44$$ZQyXGwKgzE4cbZdDHUXUp",
+    "sourcePort" : "DIk9V47tC_mcnZxzmUS0C$$axaGhv1k1Qlzu4dWMKN-x",
+    "target" : "AkIf5nVXSpkILJwDsxrc4$$0aYb5rPVn_AzH4LpBL84f",
+    "targetPort" : "LfiWAFlZylK4PZmUmFu_n$$8m1SHQAQPG8MQ61U3Vzc8"
+  }, {
+    "id" : "eI007_ABh_9X2hbrFY2mE$$bWY0ruFM1OnYpzUCQQAN4",
+    "source" : "AkIf5nVXSpkILJwDsxrc4$$0aYb5rPVn_AzH4LpBL84f",
+    "sourcePort" : "PRntO3JzLxNxLHi8lyZuB$$9W8hB8b_9s6jMNSuYThpO",
+    "target" : "6EADS5O6UIFEvuNgdBXiK$$YRTr64b3Qwz_xpLLLVXlT",
+    "targetPort" : "rCpyctx9oPii0jxHKjToy$$H7fsNwbBQ8SYYN14J5zYK"
+  }, {
+    "id" : "XYvMKMHuAv-zR68WyBp4y$$6ltWGqC7-k5V0vuPxR3lC",
+    "source" : "6EADS5O6UIFEvuNgdBXiK$$YRTr64b3Qwz_xpLLLVXlT",
+    "sourcePort" : "7AO5QDSKPucKZCOmwXzUO$$Xfo3y-w3w3ltybmKaGcYe",
+    "target" : "customer_nations##MTALinzg",
+    "targetPort" : "ZH8rOXxZ"
+  } ],
+  "component" : "Model"
+}
