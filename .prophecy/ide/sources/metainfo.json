@@ -36,32 +36,12 @@
       "children" : [ {
         "type" : "Schema",
         "name" : "DEMO_OUTPUT",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "HELLOWORLD",
         "tables" : {
-          "NATIONS" : {
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "N_NATIONKEY",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "N_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "N_REGIONKEY",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "N_COMMENT",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
-          "RBC_CUST_TARGET" : {
+          "HW_CUSTOMERS" : {
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "CUSTOMER_ID",
@@ -105,51 +85,37 @@
               }
             } ]
           },
-          "TOP_SALES" : {
+          "HW_ORDERS" : {
             "providerType" : "Snowflake",
             "fields" : [ {
+              "name" : "ORDER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
               "name" : "CUSTOMER_ID",
               "dataType" : {
                 "type" : "Number"
               }
             }, {
-              "name" : "FIRST_NAME",
+              "name" : "ORDER_STATUS",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "LAST_NAME",
+              "name" : "ORDER_CATEGORY",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "REVENUE",
+              "name" : "ORDER_DATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AMOUNT",
               "dataType" : {
                 "type" : "Float"
-              }
-            }, {
-              "name" : "ORDER_COUNT",
-              "dataType" : {
-                "type" : "Number"
-              }
-            } ]
-          },
-          "CUSTOMER_NATIONS" : {
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "NATION_KEY",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "NATION_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "COUNT_CUSTOMER",
-              "dataType" : {
-                "type" : "Number"
               }
             } ]
           }
@@ -230,6 +196,10 @@
     }, {
       "type" : "Database",
       "name" : "QA_DATABASE",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "RAJAT",
       "children" : [ ]
     }, {
       "type" : "Database",

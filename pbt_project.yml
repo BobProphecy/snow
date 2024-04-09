@@ -46,6 +46,32 @@ sqlModels:
       models: []
       datasets: []
     createdAt: '2024-04-01 15:23:32'
+  .prophecy/metadata/sqlmodels/sales_report:
+    name: sales_report
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: CUSTOMER_ID
+        dataType:
+          type: Number
+      - name: FULL_NAME
+        dataType:
+          type: String
+      - name: ORDER_COUNT
+        dataType:
+          type: Number
+      - name: TOTAL_SALES
+        dataType:
+          type: Float
+    description: null
+    author: bobw@prophecy.io
+    files:
+    - models/sales_report.sql
+    - .prophecy/ide/models/sales_report.json
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2024-04-09 13:43:30'
 sqlMacros: {}
 sqlSeeds:
   .prophecy/metadata/sqlseeds/nations:
@@ -71,6 +97,70 @@ sqlSeeds:
     - seeds/nations.csv
     createdAt: '2024-04-01 15:24:59'
 sqlSources:
+  .prophecy/metadata/sqlsources/BOBW_HELLOWORLD:
+    name: BOBW.HELLOWORLD
+    description: null
+    author: bobw@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2024-04-09 13:44:06'
+    tables:
+    - name: HW_ORDERS
+      schema:
+        providerType: snowflake
+        fields:
+        - name: ORDER_ID
+          dataType:
+            type: Number
+        - name: CUSTOMER_ID
+          dataType:
+            type: Number
+        - name: ORDER_STATUS
+          dataType:
+            type: String
+        - name: ORDER_CATEGORY
+          dataType:
+            type: String
+        - name: ORDER_DATE
+          dataType:
+            type: String
+        - name: AMOUNT
+          dataType:
+            type: Float
+      description: null
+      author: bobw@prophecy.io
+      createdAt: '2024-04-09 13:44:06'
+    - name: HW_CUSTOMERS
+      schema:
+        providerType: snowflake
+        fields:
+        - name: CUSTOMER_ID
+          dataType:
+            type: Number
+        - name: FIRST_NAME
+          dataType:
+            type: String
+        - name: LAST_NAME
+          dataType:
+            type: String
+        - name: PHONE
+          dataType:
+            type: String
+        - name: EMAIL
+          dataType:
+            type: String
+        - name: COUNTRY_CODE
+          dataType:
+            type: String
+        - name: ACCOUNT_OPEN_DATE
+          dataType:
+            type: String
+        - name: ACCOUNT_FLAGS
+          dataType:
+            type: String
+      description: null
+      author: bobw@prophecy.io
+      createdAt: '2024-04-09 13:44:22'
   .prophecy/metadata/sqlsources/SNOWFLAKE_SAMPLE_DATA_TPCH_SF10:
     name: SNOWFLAKE_SAMPLE_DATA.TPCH_SF10
     description: null

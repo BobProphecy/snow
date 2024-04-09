@@ -78,3 +78,55 @@ sources:
       tags: []
       dataType:
         type: "String"
+- name: "BOBW.HELLOWORLD"
+  database: "BOBW"
+  schema: "HELLOWORLD"
+  config:
+    enabled: true
+  tables:
+  - name: "HW_ORDERS"
+    columns:
+    - name: "ORDER_ID"
+      dataType:
+        type: "Number"
+    - name: "CUSTOMER_ID"
+      dataType:
+        type: "Number"
+    - name: "ORDER_STATUS"
+      dataType:
+        type: "String"
+    - name: "ORDER_CATEGORY"
+      dataType:
+        type: "String"
+    - name: "ORDER_DATE"
+      dataType:
+        type: "String"
+    - name: "AMOUNT"
+      dataType:
+        type: "Float"
+  - name: "HW_CUSTOMERS"
+    columns:
+    - name: "CUSTOMER_ID"
+      dataType:
+        type: "Number"
+    - name: "FIRST_NAME"
+      dataType:
+        type: "String"
+    - name: "LAST_NAME"
+      dataType:
+        type: "String"
+    - name: "PHONE"
+      dataType:
+        type: "String"
+    - name: "EMAIL"
+      dataType:
+        type: "String"
+    - name: "COUNTRY_CODE"
+      dataType:
+        type: "String"
+    - name: "ACCOUNT_OPEN_DATE"
+      dataType:
+        type: "String"
+    - name: "ACCOUNT_FLAGS"
+      dataType:
+        type: "String"
