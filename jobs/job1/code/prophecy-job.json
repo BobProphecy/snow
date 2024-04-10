@@ -1,0 +1,171 @@
+{
+  "metainfo" : {
+    "type" : "Prophecy",
+    "fabricId" : "10625",
+    "jobId" : "jobs/job1",
+    "name" : "job1",
+    "dagName" : "dLcXwWKX0zu32OeZC93BoQ_",
+    "schedule" : "0 0 * * 1",
+    "enabled" : false,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "ignore_first_depends_on_past" : true,
+      "pool" : "ydmNRhSg",
+      "do_xcom_push" : true
+    },
+    "availableFabrics" : [ {
+      "id" : "10625",
+      "name" : "Airflow",
+      "trialStartDate" : 1711576238113
+    } ],
+    "endDate" : "2024-04-17",
+    "catchup" : true,
+    "scheduleTimeZone" : "UTC",
+    "dagParams" : {
+      "instances" : {
+        "default" : { }
+      },
+      "params" : { },
+      "selected" : "default"
+    },
+    "airflowFunctions" : [ ],
+    "dynamicPipelineStatus" : {
+      "databricks" : false,
+      "dataproc" : false,
+      "emr" : false
+    }
+  },
+  "processes" : {
+    "MkuUgqdIvrCkuzq25w3yX$$7xGNJcI0PhOaTvrGEGl95" : {
+      "id" : "MkuUgqdIvrCkuzq25w3yX$$7xGNJcI0PhOaTvrGEGl95",
+      "component" : "DBT",
+      "metadata" : {
+        "label" : "DBT_0",
+        "slug" : "DBT_0",
+        "x" : -320,
+        "y" : -200
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "KHRdPQrclGMWtqvkerFxC$$UAt2J6TvkhP-VqooO3mzr",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "6zG8YVXEXyZzHl1kyQTsG$$H_TjggXf1Oa7NEwOUyjF8",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "cacheSelectedOnly" : null,
+        "gitSubPath" : null,
+        "runModelWithParents" : false,
+        "defer" : null,
+        "noDefer" : null,
+        "runSeed" : false,
+        "gitEntity" : "branch",
+        "noPartialParse" : null,
+        "model" : null,
+        "warnErrorOptions" : null,
+        "gitTokenSecret" : null,
+        "state" : null,
+        "useExperimentalParser" : null,
+        "currentProjectSnapshots" : null,
+        "gitSshUrl" : null,
+        "indirectSelection" : null,
+        "partialParse" : null,
+        "runRun" : true,
+        "vars" : null,
+        "runSnapshots" : false,
+        "noPrint" : null,
+        "quiet" : null,
+        "projectId" : null,
+        "runMode" : "project",
+        "runOnlyModel" : false,
+        "favorState" : null,
+        "failFast" : null,
+        "noStaticParser" : null,
+        "loadingModels" : false,
+        "runTest" : true,
+        "select" : null,
+        "recordTimingInfo" : null,
+        "fullRefresh" : null,
+        "noCacheSelectedOnly" : null,
+        "noFavorState" : null,
+        "snapshot" : null,
+        "isProphecyManaged" : false,
+        "profile" : null,
+        "noVersionCheck" : null,
+        "noWriteJson" : false,
+        "printerWidth" : null,
+        "sqlFabricId" : null,
+        "gitEntityValue" : null,
+        "logFormat" : null,
+        "runModelWithChildren" : false,
+        "dbtProfileSecret" : null,
+        "target" : null,
+        "exclude" : null,
+        "runDeps" : false,
+        "loadingSnapshots" : false,
+        "noAnonymousUsageStats" : null,
+        "selector" : null,
+        "targetPath" : null,
+        "threads" : null,
+        "warnError" : null,
+        "currentProjectModels" : null,
+        "profilesDir" : null,
+        "taskId" : null,
+        "logPath" : null,
+        "storeFailures" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "M8cFB2iA5EdglCu-4Ffwg$$vSh19FXqGiZDFWefJuvZ3" : {
+      "id" : "M8cFB2iA5EdglCu-4Ffwg$$vSh19FXqGiZDFWefJuvZ3",
+      "component" : "S3FileSensor",
+      "metadata" : {
+        "label" : "S3FileSensor_1",
+        "slug" : "S3FileSensor_1",
+        "x" : -460,
+        "y" : -200
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "3WHiePzzOeOCgNfV6vTGs$$4y6ol750xMEueRYeiWkoE",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "_ds11N0lXWsRHCiaZDEum$$iNxeHtRpSWVi5ZXm3hLeo",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "awsConnectionId" : null,
+        "wildCardMatch" : false,
+        "responseCheck" : null,
+        "verifySslCertificates" : true,
+        "s3Paths" : null,
+        "timeout" : 600,
+        "bucketName" : null,
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    }
+  },
+  "connections" : [ {
+    "id" : "NJ2jGKeejyJuxIy67at9x$$UmLS3vQncSAYE3Utpgc6K",
+    "source" : "M8cFB2iA5EdglCu-4Ffwg$$vSh19FXqGiZDFWefJuvZ3",
+    "target" : "MkuUgqdIvrCkuzq25w3yX$$7xGNJcI0PhOaTvrGEGl95",
+    "sourcePort" : "_ds11N0lXWsRHCiaZDEum$$iNxeHtRpSWVi5ZXm3hLeo",
+    "targetPort" : "KHRdPQrclGMWtqvkerFxC$$UAt2J6TvkhP-VqooO3mzr"
+  } ]
+}
