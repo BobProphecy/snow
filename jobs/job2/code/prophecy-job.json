@@ -1,0 +1,196 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "9769",
+    "jobId" : "jobs/job2",
+    "name" : "job2",
+    "schedule" : "0 0 0 ? * 1 *",
+    "scheduleTimeZone" : "UTC",
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "enabled" : false,
+    "defaultClusterSize" : "prophecy_internal_jobs",
+    "alerting" : {
+      "emails" : "bobw@prophecy.io",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : true
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "type" : "Inherited",
+      "retries" : 0,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      }
+    },
+    "availableFabrics" : [ {
+      "id" : "9769",
+      "name" : "DatabricksSQL",
+      "clusterSizes" : {
+        "default" : "prophecy_internal_jobs",
+        "availableClusterSizes" : [ "prophecy_internal_jobs" ]
+      }
+    } ]
+  },
+  "processes" : {
+    "BYcj5351HI9A6BEICh4hD$$3Mt5nZ5k4q25d4a0149na" : {
+      "id" : "BYcj5351HI9A6BEICh4hD$$3Mt5nZ5k4q25d4a0149na",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_0",
+        "slug" : "Script_0",
+        "x" : 100,
+        "y" : 100
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "xnF8yhAZVOhSo38lztM8E$$9vM5WXZdgBm0GBDZXw5Pa",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "XCTi1rUYbdkMRJtJDblAz$$OUuavjyPr98HaZyHHN3K0",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "code" : "PRINT ('HelloWorld')"
+      },
+      "parent" : "qXiVsjmv2RG5DY57KwmO9"
+    },
+    "qXiVsjmv2RG5DY57KwmO9" : {
+      "id" : "qXiVsjmv2RG5DY57KwmO9",
+      "component" : "Cluster",
+      "metadata" : {
+        "label" : "Cluster_1",
+        "slug" : "Cluster_1",
+        "x" : 240,
+        "y" : 40,
+        "width" : 280,
+        "height" : 280
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ ]
+      },
+      "properties" : {
+        "clusterSize" : "prophecy_internal_jobs"
+      }
+    },
+    "gpdDZG6Z5xOw5qBASJwMh$$dedY_YJSAoiDIfHoTI5uD" : {
+      "id" : "gpdDZG6Z5xOw5qBASJwMh$$dedY_YJSAoiDIfHoTI5uD",
+      "component" : "DBT",
+      "metadata" : {
+        "label" : "DBT_1",
+        "slug" : "DBT_1",
+        "x" : 100,
+        "y" : 100
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "HJS6G_raSPYW9IzfGJ2mT$$pfuvqXgSyId9t8-SgwVGG",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "S46vbQTMf19ljmBPZ1DPV$$f-FH2IwhvdRrP_XcN4F5t",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "execSeed" : true,
+        "runModelWithParents" : true,
+        "execRun" : true,
+        "gitEntity" : "branch",
+        "model" : "customer_orders",
+        "projectId" : "21686",
+        "runOnlyModel" : "true",
+        "loadingModels" : false,
+        "profile" : "run_profile",
+        "sqlFabricId" : "9769",
+        "gitEntityValue" : "sdsdas",
+        "execDeps" : true,
+        "execTest" : false,
+        "currentProjectModels" : [ {
+          "label" : "customer_orders",
+          "value" : "customer_orders",
+          "id" : "21686/.prophecy/metadata/sqlmodels/customer_orders",
+          "name" : "customer_orders"
+        }, {
+          "label" : "stg_customers",
+          "value" : "stg_customers",
+          "id" : "21686/.prophecy/metadata/sqlmodels/stg_customers",
+          "name" : "stg_customers"
+        }, {
+          "label" : "stg_payments",
+          "value" : "stg_payments",
+          "id" : "21686/.prophecy/metadata/sqlmodels/stg_payments",
+          "name" : "stg_payments"
+        }, {
+          "label" : "customers",
+          "value" : "customers",
+          "id" : "21686/.prophecy/metadata/sqlmodels/customers",
+          "name" : "customers"
+        }, {
+          "label" : "orders",
+          "value" : "orders",
+          "id" : "21686/.prophecy/metadata/sqlmodels/orders",
+          "name" : "orders"
+        }, {
+          "label" : "stg_orders",
+          "value" : "stg_orders",
+          "id" : "21686/.prophecy/metadata/sqlmodels/stg_orders",
+          "name" : "stg_orders"
+        } ]
+      },
+      "parent" : "ntI-9-MLRs-qfLdvMjnov"
+    },
+    "ntI-9-MLRs-qfLdvMjnov" : {
+      "id" : "ntI-9-MLRs-qfLdvMjnov",
+      "component" : "Cluster",
+      "metadata" : {
+        "label" : "Cluster_2",
+        "slug" : "Cluster_2",
+        "x" : 580,
+        "y" : 40,
+        "width" : 280,
+        "height" : 280
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ ]
+      },
+      "properties" : {
+        "clusterSize" : "prophecy_internal_jobs"
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "S_Co3Ai6cgCRxlCRgRbHF",
+    "source" : "BYcj5351HI9A6BEICh4hD$$3Mt5nZ5k4q25d4a0149na",
+    "target" : "gpdDZG6Z5xOw5qBASJwMh$$dedY_YJSAoiDIfHoTI5uD",
+    "sourcePort" : "XCTi1rUYbdkMRJtJDblAz$$OUuavjyPr98HaZyHHN3K0",
+    "targetPort" : "HJS6G_raSPYW9IzfGJ2mT$$pfuvqXgSyId9t8-SgwVGG"
+  } ]
+}

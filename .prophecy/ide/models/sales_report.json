@@ -19,8 +19,8 @@
     "version" : 3
   },
   "processes" : {
-    "Aggregate_sales##KxM79IG7" : {
-      "id" : "Aggregate_sales##KxM79IG7",
+    "Aggregate_sales##Cl3ChT9E" : {
+      "id" : "Aggregate_sales##Cl3ChT9E",
       "component" : "Aggregate",
       "metadata" : {
         "label" : "Aggregate_sales",
@@ -69,7 +69,7 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "hD5IlvX7",
+          "id" : "r2VZn0ZS",
           "schema" : {
             "providerType" : "Snowflake",
             "fields" : [ {
@@ -97,7 +97,7 @@
           "slug" : "clean_up"
         } ],
         "outputs" : [ {
-          "id" : "DoM6SAYb",
+          "id" : "B96hOJzK",
           "schema" : {
             "providerType" : "Snowflake",
             "fields" : [ {
@@ -128,8 +128,8 @@
         "autoUpdateOnRun" : false
       }
     },
-    "by_CUSTOMER_ID##p5VXnMXO" : {
-      "id" : "by_CUSTOMER_ID##p5VXnMXO",
+    "by_CUSTOMER_ID##FQsRzAc2" : {
+      "id" : "by_CUSTOMER_ID##FQsRzAc2",
       "component" : "Join",
       "metadata" : {
         "label" : "by_CUSTOMER_ID",
@@ -213,12 +213,12 @@
           "alias" : "ORDER_CATEGORY"
         } ],
         "activeTab" : "conditions",
-        "columnsSelector" : [ "z42UBMwv##CUSTOMER_ID", "nDIG501w##CUSTOMER_ID", "z42UBMwv##CUSTOMER_ID", "nDIG501w##FIRST_NAME", "nDIG501w##LAST_NAME", "z42UBMwv##ORDER_ID", "z42UBMwv##AMOUNT", "nDIG501w##PHONE", "nDIG501w##EMAIL", "nDIG501w##COUNTRY_CODE", "nDIG501w##ACCOUNT_OPEN_DATE", "nDIG501w##ACCOUNT_FLAGS", "z42UBMwv##ORDER_STATUS", "z42UBMwv##ORDER_DATE", "z42UBMwv##ORDER_CATEGORY" ],
+        "columnsSelector" : [ "dl1EeCVm##CUSTOMER_ID", "DR4MTXs7##CUSTOMER_ID", "dl1EeCVm##CUSTOMER_ID", "DR4MTXs7##FIRST_NAME", "DR4MTXs7##LAST_NAME", "dl1EeCVm##ORDER_ID", "dl1EeCVm##AMOUNT", "DR4MTXs7##PHONE", "DR4MTXs7##EMAIL", "DR4MTXs7##COUNTRY_CODE", "DR4MTXs7##ACCOUNT_OPEN_DATE", "DR4MTXs7##ACCOUNT_FLAGS", "dl1EeCVm##ORDER_STATUS", "dl1EeCVm##ORDER_DATE", "dl1EeCVm##ORDER_CATEGORY" ],
         "headAlias" : "HW_ORDERS"
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "z42UBMwv",
+          "id" : "dl1EeCVm",
           "schema" : {
             "providerType" : "snowflake",
             "fields" : [ {
@@ -255,7 +255,7 @@
           },
           "slug" : "HW_ORDERS"
         }, {
-          "id" : "nDIG501w",
+          "id" : "DR4MTXs7",
           "schema" : {
             "providerType" : "snowflake",
             "fields" : [ {
@@ -303,7 +303,7 @@
           "slug" : "HW_CUSTOMERS"
         } ],
         "outputs" : [ {
-          "id" : "DbDsHSk5",
+          "id" : "xCkpcLKu",
           "schema" : {
             "providerType" : "Snowflake",
             "fields" : [ {
@@ -379,229 +379,8 @@
         "autoUpdateOnRun" : false
       }
     },
-    "OrderBySales##L9zNTyi4" : {
-      "id" : "OrderBySales##L9zNTyi4",
-      "component" : "OrderBy",
-      "metadata" : {
-        "label" : "OrderBySales",
-        "x" : 820,
-        "y" : 120,
-        "phase" : 0,
-        "macroDependencies" : [ ]
-      },
-      "properties" : {
-        "columnsSelector" : [ ],
-        "orders" : [ {
-          "expression" : {
-            "expression" : "TOTAL_SALES"
-          },
-          "sortType" : "desc"
-        } ]
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "aRGtu5nu",
-          "schema" : {
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "CUSTOMER_ID",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "FULL_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "ORDER_COUNT",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "TOTAL_SALES",
-              "dataType" : {
-                "type" : "Float"
-              }
-            } ]
-          },
-          "slug" : "Aggregate_sales"
-        } ],
-        "outputs" : [ {
-          "id" : "CgIuag8V",
-          "schema" : {
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "CUSTOMER_ID",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "FULL_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "ORDER_COUNT",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "TOTAL_SALES",
-              "dataType" : {
-                "type" : "Float"
-              }
-            } ]
-          },
-          "slug" : "out"
-        } ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      }
-    },
-    "sales_report##CfcGAnTi" : {
-      "id" : "sales_report##CfcGAnTi",
-      "component" : "TargetModel",
-      "metadata" : {
-        "label" : "sales_report",
-        "x" : 1220,
-        "y" : 120,
-        "phase" : 0,
-        "macroDependencies" : [ ]
-      },
-      "properties" : {
-        "customQueryDisabled" : true,
-        "customQuery" : false,
-        "incrementalEditorDisabled" : true,
-        "query" : "SELECT * \n\nFROM Limit_Top\n",
-        "incrementalKey" : false,
-        "incremental" : {
-          "expression" : "true"
-        }
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "dXppX3ub",
-          "schema" : {
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "CUSTOMER_ID",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "FULL_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "ORDER_COUNT",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "TOTAL_SALES",
-              "dataType" : {
-                "type" : "Float"
-              }
-            } ]
-          },
-          "slug" : "Limit_Top"
-        } ],
-        "outputs" : [ {
-          "id" : "XayI8EnX",
-          "schema" : {
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "CUSTOMER_ID",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "FULL_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "ORDER_COUNT",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "TOTAL_SALES",
-              "dataType" : {
-                "type" : "Float"
-              }
-            } ]
-          },
-          "slug" : "out"
-        } ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      }
-    },
-    "HW_ORDERS##R3RHHStK" : {
-      "id" : "HW_ORDERS##R3RHHStK",
-      "component" : "Source",
-      "metadata" : {
-        "label" : "HW_ORDERS",
-        "x" : 20,
-        "y" : 20,
-        "phase" : 0
-      },
-      "properties" : {
-        "table" : {
-          "name" : "HW_ORDERS",
-          "sourceType" : "Source",
-          "sourceName" : "BOBW.HELLOWORLD"
-        }
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "JVr3p4oP",
-          "schema" : {
-            "providerType" : "snowflake",
-            "fields" : [ {
-              "name" : "ORDER_ID",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "CUSTOMER_ID",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "ORDER_STATUS",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "ORDER_CATEGORY",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "ORDER_DATE",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "AMOUNT",
-              "dataType" : {
-                "type" : "Float"
-              }
-            } ]
-          },
-          "slug" : "out"
-        } ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      }
-    },
-    "HW_CUSTOMERS##rt4Wicec" : {
-      "id" : "HW_CUSTOMERS##rt4Wicec",
+    "HW_CUSTOMERS##LCgYYz8C" : {
+      "id" : "HW_CUSTOMERS##LCgYYz8C",
       "component" : "Source",
       "metadata" : {
         "label" : "HW_CUSTOMERS",
@@ -619,7 +398,7 @@
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "VWx15TwX",
+          "id" : "C4kb6dMU",
           "schema" : {
             "providerType" : "snowflake",
             "fields" : [ {
@@ -670,8 +449,68 @@
         "autoUpdateOnRun" : false
       }
     },
-    "clean_up##srwe9ivd" : {
-      "id" : "clean_up##srwe9ivd",
+    "HW_ORDERS##i51L5dSk" : {
+      "id" : "HW_ORDERS##i51L5dSk",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "HW_ORDERS",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "HW_ORDERS",
+          "sourceType" : "Source",
+          "sourceName" : "BOBW.HELLOWORLD"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "olItqcv1",
+          "schema" : {
+            "providerType" : "snowflake",
+            "fields" : [ {
+              "name" : "ORDER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ORDER_STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_CATEGORY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_DATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AMOUNT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "clean_up##VimFj0Er" : {
+      "id" : "clean_up##VimFj0Er",
       "component" : "Reformat",
       "metadata" : {
         "label" : "clean_up",
@@ -706,7 +545,7 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "AYbreubv",
+          "id" : "W399NWG0",
           "schema" : {
             "providerType" : "Snowflake",
             "fields" : [ {
@@ -779,7 +618,7 @@
           "slug" : "by_CUSTOMER_ID"
         } ],
         "outputs" : [ {
-          "id" : "GuUrASqs",
+          "id" : "vfJTHDE7",
           "schema" : {
             "providerType" : "Snowflake",
             "fields" : [ {
@@ -810,8 +649,169 @@
         "autoUpdateOnRun" : false
       }
     },
-    "Limit_Top##T4IJmr4Y" : {
-      "id" : "Limit_Top##T4IJmr4Y",
+    "OrderBySales##QhKmwc1l" : {
+      "id" : "OrderBySales##QhKmwc1l",
+      "component" : "OrderBy",
+      "metadata" : {
+        "label" : "OrderBySales",
+        "x" : 820,
+        "y" : 120,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "orders" : [ {
+          "expression" : {
+            "expression" : "TOTAL_SALES"
+          },
+          "sortType" : "desc"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "sSM2fMuP",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "FULL_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "TOTAL_SALES",
+              "dataType" : {
+                "type" : "Float"
+              }
+            } ]
+          },
+          "slug" : "Aggregate_sales"
+        } ],
+        "outputs" : [ {
+          "id" : "PdOVYQVp",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "FULL_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "TOTAL_SALES",
+              "dataType" : {
+                "type" : "Float"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "sales_report##h8xmsBI3" : {
+      "id" : "sales_report##h8xmsBI3",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "sales_report",
+        "x" : 1220,
+        "y" : 120,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM Limit_Top\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ld0Jj2Un",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "FULL_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "TOTAL_SALES",
+              "dataType" : {
+                "type" : "Float"
+              }
+            } ]
+          },
+          "slug" : "Limit_Top"
+        } ],
+        "outputs" : [ {
+          "id" : "wSJDEkkP",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "FULL_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "TOTAL_SALES",
+              "dataType" : {
+                "type" : "Float"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Limit_Top##F8DsMkwY" : {
+      "id" : "Limit_Top##F8DsMkwY",
       "component" : "Limit",
       "metadata" : {
         "label" : "Limit_Top",
@@ -828,7 +828,7 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "Jgj3Aovg",
+          "id" : "IOvgyp2d",
           "schema" : {
             "providerType" : "Snowflake",
             "fields" : [ {
@@ -856,7 +856,7 @@
           "slug" : "in0"
         } ],
         "outputs" : [ {
-          "id" : "KsDxosJq",
+          "id" : "x98IhMjG",
           "schema" : {
             "providerType" : "Snowflake",
             "fields" : [ {
@@ -889,47 +889,47 @@
     }
   },
   "connections" : [ {
-    "id" : "H4vas4YT",
-    "source" : "HW_ORDERS##R3RHHStK",
-    "sourcePort" : "JVr3p4oP",
-    "target" : "by_CUSTOMER_ID##p5VXnMXO",
-    "targetPort" : "z42UBMwv"
+    "id" : "Cpn5k2rg",
+    "source" : "HW_ORDERS##i51L5dSk",
+    "sourcePort" : "olItqcv1",
+    "target" : "by_CUSTOMER_ID##FQsRzAc2",
+    "targetPort" : "dl1EeCVm"
   }, {
-    "id" : "rdjExwga",
-    "source" : "HW_CUSTOMERS##rt4Wicec",
-    "sourcePort" : "VWx15TwX",
-    "target" : "by_CUSTOMER_ID##p5VXnMXO",
-    "targetPort" : "nDIG501w"
+    "id" : "SM5LYJIY",
+    "source" : "HW_CUSTOMERS##LCgYYz8C",
+    "sourcePort" : "C4kb6dMU",
+    "target" : "by_CUSTOMER_ID##FQsRzAc2",
+    "targetPort" : "DR4MTXs7"
   }, {
-    "id" : "AwDsw8gx",
-    "source" : "by_CUSTOMER_ID##p5VXnMXO",
-    "sourcePort" : "DbDsHSk5",
-    "target" : "clean_up##srwe9ivd",
-    "targetPort" : "AYbreubv"
+    "id" : "vZ8DmQZB",
+    "source" : "by_CUSTOMER_ID##FQsRzAc2",
+    "sourcePort" : "xCkpcLKu",
+    "target" : "clean_up##VimFj0Er",
+    "targetPort" : "W399NWG0"
   }, {
-    "id" : "UZhhEaQe",
-    "source" : "clean_up##srwe9ivd",
-    "sourcePort" : "GuUrASqs",
-    "target" : "Aggregate_sales##KxM79IG7",
-    "targetPort" : "hD5IlvX7"
+    "id" : "qhM6dOzg",
+    "source" : "clean_up##VimFj0Er",
+    "sourcePort" : "vfJTHDE7",
+    "target" : "Aggregate_sales##Cl3ChT9E",
+    "targetPort" : "r2VZn0ZS"
   }, {
-    "id" : "qQBcgYdE",
-    "source" : "Aggregate_sales##KxM79IG7",
-    "sourcePort" : "DoM6SAYb",
-    "target" : "OrderBySales##L9zNTyi4",
-    "targetPort" : "aRGtu5nu"
+    "id" : "m82qo33v",
+    "source" : "Aggregate_sales##Cl3ChT9E",
+    "sourcePort" : "B96hOJzK",
+    "target" : "OrderBySales##QhKmwc1l",
+    "targetPort" : "sSM2fMuP"
   }, {
-    "id" : "sPmX92JU",
-    "source" : "OrderBySales##L9zNTyi4",
-    "sourcePort" : "CgIuag8V",
-    "target" : "Limit_Top##T4IJmr4Y",
-    "targetPort" : "Jgj3Aovg"
+    "id" : "EvoSSjr9",
+    "source" : "OrderBySales##QhKmwc1l",
+    "sourcePort" : "PdOVYQVp",
+    "target" : "Limit_Top##F8DsMkwY",
+    "targetPort" : "IOvgyp2d"
   }, {
-    "id" : "UC2boVKn",
-    "source" : "Limit_Top##T4IJmr4Y",
-    "sourcePort" : "KsDxosJq",
-    "target" : "sales_report##CfcGAnTi",
-    "targetPort" : "dXppX3ub"
+    "id" : "TLdNhVix",
+    "source" : "Limit_Top##F8DsMkwY",
+    "sourcePort" : "x98IhMjG",
+    "target" : "sales_report##h8xmsBI3",
+    "targetPort" : "ld0Jj2Un"
   } ],
   "component" : "Model"
 }

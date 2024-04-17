@@ -42,130 +42,34 @@
     }
   },
   "processes" : {
-    "MkuUgqdIvrCkuzq25w3yX$$7xGNJcI0PhOaTvrGEGl95" : {
-      "id" : "MkuUgqdIvrCkuzq25w3yX$$7xGNJcI0PhOaTvrGEGl95",
-      "component" : "DBT",
+    "bF_7gfVVG2CJPlaOm7iHo$$mw5emSgHUsNTeVRvcytXi" : {
+      "id" : "bF_7gfVVG2CJPlaOm7iHo$$mw5emSgHUsNTeVRvcytXi",
+      "component" : "Script",
       "metadata" : {
-        "label" : "DBT_0",
-        "slug" : "DBT_0",
-        "x" : -320,
-        "y" : -200
+        "label" : "Script_0",
+        "slug" : "Script_0",
+        "x" : 260,
+        "y" : 140
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "KHRdPQrclGMWtqvkerFxC$$UAt2J6TvkhP-VqooO3mzr",
+          "id" : "JE6FCSp6lG2Igvv0G5Nne$$z48q3W1YYlfMpOq6SncjO",
           "slug" : ""
         } ],
         "outputs" : [ {
-          "id" : "6zG8YVXEXyZzHl1kyQTsG$$H_TjggXf1Oa7NEwOUyjF8",
+          "id" : "JA5Vobryn1vef0IhU_zKt$$a5IEZmiKI22CnkkBQsnrx",
           "slug" : ""
         } ]
       },
       "settings" : { },
       "properties" : {
-        "cacheSelectedOnly" : null,
-        "gitSubPath" : null,
-        "runModelWithParents" : false,
-        "defer" : null,
-        "noDefer" : null,
-        "runSeed" : false,
-        "gitEntity" : "branch",
-        "noPartialParse" : null,
-        "model" : null,
-        "warnErrorOptions" : null,
-        "gitTokenSecret" : null,
-        "state" : null,
-        "useExperimentalParser" : null,
-        "currentProjectSnapshots" : null,
-        "gitSshUrl" : null,
-        "indirectSelection" : null,
-        "partialParse" : null,
-        "runRun" : true,
-        "vars" : null,
-        "runSnapshots" : false,
-        "noPrint" : null,
-        "quiet" : null,
-        "projectId" : null,
-        "runMode" : "project",
-        "runOnlyModel" : false,
-        "favorState" : null,
-        "failFast" : null,
-        "noStaticParser" : null,
-        "loadingModels" : false,
-        "runTest" : true,
-        "select" : null,
-        "recordTimingInfo" : null,
-        "fullRefresh" : null,
-        "noCacheSelectedOnly" : null,
-        "noFavorState" : null,
-        "snapshot" : null,
-        "isProphecyManaged" : false,
-        "profile" : null,
-        "noVersionCheck" : null,
-        "noWriteJson" : false,
-        "printerWidth" : null,
-        "sqlFabricId" : null,
-        "gitEntityValue" : null,
-        "logFormat" : null,
-        "runModelWithChildren" : false,
-        "dbtProfileSecret" : null,
-        "target" : null,
-        "exclude" : null,
-        "runDeps" : false,
-        "loadingSnapshots" : false,
-        "noAnonymousUsageStats" : null,
-        "selector" : null,
-        "targetPath" : null,
-        "threads" : null,
-        "warnError" : null,
-        "currentProjectModels" : null,
-        "profilesDir" : null,
-        "taskId" : null,
-        "logPath" : null,
-        "storeFailures" : null
-      },
-      "connections" : [ ],
-      "processes" : { }
-    },
-    "M8cFB2iA5EdglCu-4Ffwg$$vSh19FXqGiZDFWefJuvZ3" : {
-      "id" : "M8cFB2iA5EdglCu-4Ffwg$$vSh19FXqGiZDFWefJuvZ3",
-      "component" : "S3FileSensor",
-      "metadata" : {
-        "label" : "S3FileSensor_1",
-        "slug" : "S3FileSensor_1",
-        "x" : -460,
-        "y" : -200
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "3WHiePzzOeOCgNfV6vTGs$$4y6ol750xMEueRYeiWkoE",
-          "slug" : ""
-        } ],
-        "outputs" : [ {
-          "id" : "_ds11N0lXWsRHCiaZDEum$$iNxeHtRpSWVi5ZXm3hLeo",
-          "slug" : ""
-        } ]
-      },
-      "settings" : { },
-      "properties" : {
-        "awsConnectionId" : null,
-        "wildCardMatch" : false,
-        "responseCheck" : null,
-        "verifySslCertificates" : true,
-        "s3Paths" : null,
-        "timeout" : 600,
-        "bucketName" : null,
+        "code" : "PRINT ('Hello')",
+        "language" : "bash",
         "taskId" : null
       },
       "connections" : [ ],
       "processes" : { }
     }
   },
-  "connections" : [ {
-    "id" : "NJ2jGKeejyJuxIy67at9x$$UmLS3vQncSAYE3Utpgc6K",
-    "source" : "M8cFB2iA5EdglCu-4Ffwg$$vSh19FXqGiZDFWefJuvZ3",
-    "target" : "MkuUgqdIvrCkuzq25w3yX$$7xGNJcI0PhOaTvrGEGl95",
-    "sourcePort" : "_ds11N0lXWsRHCiaZDEum$$iNxeHtRpSWVi5ZXm3hLeo",
-    "targetPort" : "KHRdPQrclGMWtqvkerFxC$$UAt2J6TvkhP-VqooO3mzr"
-  } ]
+  "connections" : [ ]
 }

@@ -1,5 +1,5 @@
 name: test
-description: ''
+description: SQL Snowflake demo project
 version: '1'
 author: null
 language: sql
@@ -32,6 +32,29 @@ jobs:
     enabled: null
     createdAt: '2024-04-10 18:47:54'
     author: bobw@prophecy.io
+  jobs/job2:
+    name: job2
+    description: ''
+    fabricUID: 9769
+    scheduler:
+      Databricks: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: 0 0 0 ? * 1 *
+    timeout: null
+    alerting:
+      emails: bobw@prophecy.io
+      onStart: false
+      onSuccess: false
+      onFailure: true
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2024-04-17 18:43:35'
+    author: bobw@prophecy.io
 gemContainer:
   languageVersion: ''
   gemLibsVersion: ''
@@ -51,13 +74,13 @@ sqlModels:
     schema:
       providerType: Snowflake
       fields:
-      - name: NATION_KEY
-        dataType:
-          type: Number
-      - name: NATION_NAME
+      - name: N_NAME
         dataType:
           type: String
-      - name: COUNT_CUSTOMER
+      - name: C_NAME
+        dataType:
+          type: String
+      - name: C_CUSTKEY
         dataType:
           type: Number
     description: null
@@ -190,7 +213,7 @@ sqlSources:
     author: bobw@prophecy.io
     files:
     - prophecy-sources/sources.yml
-    createdAt: '2024-04-01 15:27:14'
+    createdAt: '2024-04-17 19:03:51'
     tables:
     - name: CUSTOMER
       schema:
@@ -220,15 +243,9 @@ sqlSources:
         - name: C_COMMENT
           dataType:
             type: String
-      description: This dataset is sourced from a SQL database and contains detailed
-        information about customers, including their unique customer key, name, address,
-        nation, phone number, account balance, market segment, and comments. This
-        data is valuable for analyzing customer behavior, identifying market segments,
-        and developing targeted marketing strategies. It can also be used to evaluate
-        customer satisfaction and loyalty, as well as to track customer interactions
-        and preferences over time.
+      description: null
       author: bobw@prophecy.io
-      createdAt: '2024-04-01 15:27:14'
+      createdAt: '2024-04-17 19:03:51'
 sqlUnreferencedSources: {}
 sqlPipeline:
   name: sqlPipeline

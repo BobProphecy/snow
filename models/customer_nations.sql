@@ -20,39 +20,29 @@ CUSTOMER AS (
 
 ),
 
-nations_CUSTOMER AS (
+CUSTOMER_nations AS (
 
   SELECT * 
   
   FROM nations
   INNER JOIN CUSTOMER
-     ON nations.n_nationkey = CUSTOMER.C_NATIONKEY
+     ON CUSTOMER.C_NATIONKEY = nations.n_nationkey
 
 ),
 
-Aggregate_1 AS (
+customer_nations_group_by_nation AS (
 
   SELECT 
-    any_value(N_NATIONKEY) AS nation_key,
-    any_value(N_NAME) AS nation_name,
-    COUNT(DISTINCT C_CUSTKEY) AS count_customer
+    any_value(N_NAME) AS N_NAME,
+    any_value(C_NAME) AS C_NAME,
+    COUNT(C_CUSTKEY) AS C_CUSTKEY
   
-  FROM nations_CUSTOMER
+  FROM CUSTOMER_nations
   
   GROUP BY N_NATIONKEY
-
-),
-
-OrderBy_1 AS (
-
-  SELECT * 
-  
-  FROM Aggregate_1 AS in0
-  
-  ORDER BY COUNT_CUSTOMER DESC
 
 )
 
 SELECT *
 
-FROM OrderBy_1
+FROM customer_nations_group_by_nation
