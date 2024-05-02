@@ -92,7 +92,7 @@
     },
     "gpdDZG6Z5xOw5qBASJwMh$$dedY_YJSAoiDIfHoTI5uD" : {
       "id" : "gpdDZG6Z5xOw5qBASJwMh$$dedY_YJSAoiDIfHoTI5uD",
-      "component" : "DBT",
+      "component" : "Model",
       "metadata" : {
         "label" : "DBT_1",
         "slug" : "DBT_1",

@@ -12,7 +12,7 @@ jobs:
   jobs/job1:
     name: job1
     description: ''
-    fabricUID: 10625
+    fabricUID: 11413
     scheduler:
       Prophecy: {}
     cloudProvider: null
@@ -27,9 +27,9 @@ jobs:
     pipelines: []
     jobClusterMode:
       clusterMode:
-        Single: {}
+        Multi: {}
       clusterId: null
-    enabled: null
+    enabled: false
     createdAt: '2024-04-10 18:47:54'
     author: bobw@prophecy.io
   jobs/job2:
@@ -69,6 +69,39 @@ functions:
   airflowFunctions: {}
 subgraphs: {}
 sqlModels:
+  .prophecy/metadata/sqlmodels/cpSQL:
+    name: cpSQL
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: C_NAME
+        dataType:
+          type: String
+      - name: TOTAL_SALES
+        dataType:
+          type: Float
+    description: This pipeline graph provides insights into the top 15 customers with
+      the highest total sales. By joining the 'HW_ORDERS' table from the 'BOBW.HELLOWORLD'
+      source with the 'CUSTOMER' table from the 'SNOWFLAKE_SAMPLE_DATA.TPCH_SF10'
+      source, it combines order and customer information. The resulting dataset includes
+      details such as order ID, customer ID, order status, order category, order date,
+      amount, customer name, customer address, customer phone number, customer account
+      balance, customer market segment, and customer comments. By summarizing the
+      total sales for each customer and ordering them in descending order, businesses
+      can identify their top-performing customers and tailor their marketing and sales
+      strategies accordingly.
+    author: bobw@prophecy.io
+    files:
+    - models/cpSQL.sql
+    - .prophecy/ide/models/cpSQL.json
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-05-02 16:58:34'
   .prophecy/metadata/sqlmodels/customer_nations:
     name: customer_nations
     schema:
@@ -91,6 +124,9 @@ sqlModels:
     sqlDependencies:
       models: []
       datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
     createdAt: '2024-04-01 15:23:32'
   .prophecy/metadata/sqlmodels/sales_report:
     name: sales_report
@@ -117,7 +153,11 @@ sqlModels:
     sqlDependencies:
       models: []
       datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
     createdAt: '2024-04-09 13:43:30'
+sqlSnapshots: {}
 sqlMacros: {}
 sqlSeeds:
   .prophecy/metadata/sqlseeds/nations:

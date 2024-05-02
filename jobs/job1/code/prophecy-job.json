@@ -1,10 +1,10 @@
 {
   "metainfo" : {
     "type" : "Prophecy",
-    "fabricId" : "10625",
+    "fabricId" : "11413",
     "jobId" : "jobs/job1",
     "name" : "job1",
-    "dagName" : "dLcXwWKX0zu32OeZC93BoQ_",
+    "dagName" : "mbRylqVG5lc2duL1M70F2Q_",
     "schedule" : "0 0 * * 1",
     "enabled" : false,
     "alerting" : {
@@ -15,17 +15,20 @@
     },
     "maxConcurrentRuns" : 1,
     "processDefaultSettings" : {
+      "email" : "bobw@prophecy.io",
+      "email_on_failure" : true,
       "ignore_first_depends_on_past" : true,
-      "pool" : "ydmNRhSg",
+      "pool" : "XL7tAWek",
       "do_xcom_push" : true
     },
     "availableFabrics" : [ {
-      "id" : "10625",
-      "name" : "Airflow",
-      "trialStartDate" : 1711576238113
+      "id" : "11413",
+      "name" : "Airflow-Prophecy",
+      "trialStartDate" : 1713534461239
     } ],
-    "endDate" : "2024-04-17",
+    "endDate" : "2024-05-05",
     "catchup" : true,
+    "tags" : [ ],
     "scheduleTimeZone" : "UTC",
     "dagParams" : {
       "instances" : {
@@ -38,34 +41,102 @@
     "dynamicPipelineStatus" : {
       "databricks" : false,
       "dataproc" : false,
-      "emr" : false
+      "emr" : false,
+      "onprem" : false
     }
   },
   "processes" : {
-    "bF_7gfVVG2CJPlaOm7iHo$$mw5emSgHUsNTeVRvcytXi" : {
-      "id" : "bF_7gfVVG2CJPlaOm7iHo$$mw5emSgHUsNTeVRvcytXi",
-      "component" : "Script",
+    "BkAgG4vr8Y-Oe3e9yEjB-$$xkSRZ6KAHaAY7VHizIh-u" : {
+      "id" : "BkAgG4vr8Y-Oe3e9yEjB-$$xkSRZ6KAHaAY7VHizIh-u",
+      "component" : "Model",
       "metadata" : {
-        "label" : "Script_0",
-        "slug" : "Script_0",
-        "x" : 260,
-        "y" : 140
+        "label" : "sales_report_model",
+        "slug" : "sales_report_model",
+        "x" : -60,
+        "y" : -260
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "JE6FCSp6lG2Igvv0G5Nne$$z48q3W1YYlfMpOq6SncjO",
+          "id" : "X5w32cMZ3e4TGXJ-xaa40$$hArICqk-ePB5vhMRbQAFi",
           "slug" : ""
         } ],
         "outputs" : [ {
-          "id" : "JA5Vobryn1vef0IhU_zKt$$a5IEZmiKI22CnkkBQsnrx",
+          "id" : "XHxOKxRmhrniR3LJl3p4H$$PkrhYeboxN1Efwh7gOdmy",
           "slug" : ""
         } ]
       },
       "settings" : { },
       "properties" : {
-        "code" : "PRINT ('Hello')",
-        "language" : "bash",
-        "taskId" : null
+        "cacheSelectedOnly" : null,
+        "gitSubPath" : null,
+        "runModelWithParents" : false,
+        "defer" : null,
+        "noDefer" : null,
+        "runSeed" : false,
+        "gitEntity" : "branch",
+        "noPartialParse" : null,
+        "model" : "sales_report",
+        "warnErrorOptions" : null,
+        "gitTokenSecret" : null,
+        "state" : null,
+        "useExperimentalParser" : null,
+        "currentProjectSnapshots" : null,
+        "gitSshUrl" : null,
+        "indirectSelection" : null,
+        "partialParse" : null,
+        "runRun" : true,
+        "vars" : null,
+        "runSnapshots" : false,
+        "noPrint" : null,
+        "quiet" : null,
+        "projectId" : "22387",
+        "runMode" : "model",
+        "runOnlyModel" : false,
+        "favorState" : null,
+        "failFast" : null,
+        "noStaticParser" : null,
+        "loadingModels" : false,
+        "runTest" : true,
+        "select" : null,
+        "recordTimingInfo" : null,
+        "fullRefresh" : null,
+        "noCacheSelectedOnly" : null,
+        "noFavorState" : null,
+        "snapshot" : null,
+        "isProphecyManaged" : false,
+        "profile" : null,
+        "noVersionCheck" : null,
+        "noWriteJson" : false,
+        "printerWidth" : null,
+        "sqlFabricId" : "10653",
+        "gitEntityValue" : "dev",
+        "logFormat" : null,
+        "runModelWithChildren" : false,
+        "dbtProfileSecret" : null,
+        "target" : null,
+        "exclude" : null,
+        "runDeps" : false,
+        "loadingSnapshots" : false,
+        "noAnonymousUsageStats" : null,
+        "selector" : null,
+        "targetPath" : null,
+        "threads" : null,
+        "warnError" : null,
+        "currentProjectModels" : [ {
+          "label" : "sales_report",
+          "value" : "sales_report",
+          "id" : "22387/.prophecy/metadata/sqlmodels/sales_report",
+          "name" : "sales_report"
+        }, {
+          "label" : "customer_nations",
+          "value" : "customer_nations",
+          "id" : "22387/.prophecy/metadata/sqlmodels/customer_nations",
+          "name" : "customer_nations"
+        } ],
+        "profilesDir" : null,
+        "taskId" : null,
+        "logPath" : null,
+        "storeFailures" : null
       },
       "connections" : [ ],
       "processes" : { }

@@ -1,4 +1,16 @@
 ---
 version: 2
-models: []
+models:
+- name: "cpSQL"
+  description: "This pipeline graph provides insights into the top 15 customers with\
+    \ the highest total sales. By joining the 'HW_ORDERS' table from the 'BOBW.HELLOWORLD'\
+    \ source with the 'CUSTOMER' table from the 'SNOWFLAKE_SAMPLE_DATA.TPCH_SF10'\
+    \ source, it combines order and customer information. The resulting dataset includes\
+    \ details such as order ID, customer ID, order status, order category, order date,\
+    \ amount, customer name, customer address, customer phone number, customer account\
+    \ balance, customer market segment, and customer comments. By summarizing the\
+    \ total sales for each customer and ordering them in descending order, businesses\
+    \ can identify their top-performing customers and tailor their marketing and sales\
+    \ strategies accordingly."
+  columns: []
 sources: []
