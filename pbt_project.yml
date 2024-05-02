@@ -1,6 +1,6 @@
 name: test
 description: SQL Snowflake demo project
-version: '1'
+version: '1.2'
 author: null
 language: sql
 buildSystem: ''
