@@ -1,0 +1,49 @@
+{
+  "id" : "test_csv",
+  "metainfo" : {
+    "label" : "test_csv",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "test_csv##hMcZ0wXk" : {
+      "id" : "test_csv##hMcZ0wXk",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "test_csv",
+        "x" : 280,
+        "y" : -280,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM in0\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "dzW7Uv1v",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "s20Nkm8G",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ ],
+  "component" : "Model"
+}

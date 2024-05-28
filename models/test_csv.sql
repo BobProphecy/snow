@@ -1,0 +1,3 @@
+SELECT *
+
+FROM in0

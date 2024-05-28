@@ -157,7 +157,23 @@ sqlModels:
       sources: []
       snapshots: []
     createdAt: '2024-04-09 13:43:30'
+  .prophecy/metadata/sqlmodels/test_csv:
+    name: test_csv
+    schema: null
+    description: null
+    author: bobw@prophecy.io
+    files:
+    - models/test_csv.sql
+    - .prophecy/ide/models/test_csv.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-05-28 19:55:37'
 sqlSnapshots: {}
+sqlTests: {}
 sqlMacros: {}
 sqlSeeds:
   .prophecy/metadata/sqlseeds/nations:
