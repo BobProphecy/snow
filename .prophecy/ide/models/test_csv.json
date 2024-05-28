@@ -16,7 +16,7 @@
       "metadata" : {
         "label" : "test_csv",
         "x" : 280,
-        "y" : -280,
+        "y" : -320,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -24,7 +24,7 @@
         "customQueryDisabled" : true,
         "customQuery" : false,
         "incrementalEditorDisabled" : true,
-        "query" : "SELECT * \n\nFROM in0\n",
+        "query" : "SELECT * \n\nFROM stooges\n",
         "incrementalKey" : false,
         "incremental" : {
           "expression" : "true"
@@ -33,10 +33,124 @@
       "ports" : {
         "inputs" : [ {
           "id" : "dzW7Uv1v",
-          "slug" : "in0"
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "employee_id",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "f_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "manager_id",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "stooges"
         } ],
         "outputs" : [ {
           "id" : "s20Nkm8G",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "EMPLOYEE_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "F_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "L_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TITLE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "MANAGER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "TTBx7wrL4qXW7cdWDmXGo" : {
+      "id" : "TTBx7wrL4qXW7cdWDmXGo",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "stooges",
+        "slug" : "stooges",
+        "x" : -140,
+        "y" : -320,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "stooges",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "9e6A5IrrSYNfGOwu07fl6",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "employee_id",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "f_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "l_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "title",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "manager_id",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
@@ -44,6 +158,12 @@
       }
     }
   },
-  "connections" : [ ],
+  "connections" : [ {
+    "id" : "V4VXv7bw3IzAWoAD9k6W4",
+    "source" : "TTBx7wrL4qXW7cdWDmXGo",
+    "sourcePort" : "9e6A5IrrSYNfGOwu07fl6",
+    "target" : "test_csv##hMcZ0wXk",
+    "targetPort" : "dzW7Uv1v"
+  } ],
   "component" : "Model"
 }

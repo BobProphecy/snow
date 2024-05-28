@@ -1,3 +1,11 @@
+WITH stooges AS (
+
+  SELECT * 
+  
+  FROM {{ ref('stooges')}}
+
+)
+
 SELECT *
 
-FROM in0
+FROM stooges

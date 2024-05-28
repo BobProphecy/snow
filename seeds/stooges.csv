@@ -1,0 +1,8 @@
+employee_id,f_name,l_name,title,manager_id
+1, Larry,Fine,Associate,6
+2, Curly,Howard,Associate,6
+3, Shemp,Howard,Associate,6
+4, Joe,Besser,Associate,6
+5, CurlyJoe,DeRita,Associate,6
+6, Moe,Howard,Manager,7
+7, Ted,Healy,Founder,7

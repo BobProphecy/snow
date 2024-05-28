@@ -159,7 +159,24 @@ sqlModels:
     createdAt: '2024-04-09 13:43:30'
   .prophecy/metadata/sqlmodels/test_csv:
     name: test_csv
-    schema: null
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: EMPLOYEE_ID
+        dataType:
+          type: Number
+      - name: F_NAME
+        dataType:
+          type: String
+      - name: L_NAME
+        dataType:
+          type: String
+      - name: TITLE
+        dataType:
+          type: String
+      - name: MANAGER_ID
+        dataType:
+          type: Number
     description: null
     author: bobw@prophecy.io
     files:
@@ -198,6 +215,31 @@ sqlSeeds:
     files:
     - seeds/nations.csv
     createdAt: '2024-04-01 15:24:59'
+  .prophecy/metadata/sqlseeds/stooges:
+    name: stooges
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: employee_id
+        dataType:
+          type: Number
+      - name: f_name
+        dataType:
+          type: String
+      - name: l_name
+        dataType:
+          type: String
+      - name: title
+        dataType:
+          type: String
+      - name: manager_id
+        dataType:
+          type: Number
+    description: null
+    author: bobw@prophecy.io
+    files:
+    - seeds/stooges.csv
+    createdAt: '2024-05-28 20:00:03'
 sqlSources:
   .prophecy/metadata/sqlsources/BOBW_HELLOWORLD:
     name: BOBW.HELLOWORLD
