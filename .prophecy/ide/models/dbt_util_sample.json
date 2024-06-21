@@ -1,0 +1,478 @@
+{
+  "id" : "dbt_util_sample",
+  "metainfo" : {
+    "label" : "dbt_util_sample",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "deduplicated_events##kQQDp6F1" : {
+      "id" : "deduplicated_events##kQQDp6F1",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "deduplicated_events",
+        "x" : 20,
+        "y" : -40,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Creates a deduplicated list of events with user ID, event type, version, and version date.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "columnsSelector" : [ "hUJ2nHuo##USER_ID", "hUJ2nHuo##EVENT", "hUJ2nHuo##VERSION", "hUJ2nHuo##DATE" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "USER_ID"
+          }
+        }, {
+          "expression" : {
+            "expression" : "EVENT"
+          }
+        }, {
+          "expression" : {
+            "expression" : "VERSION"
+          }
+        }, {
+          "expression" : {
+            "expression" : "DATE"
+          },
+          "alias" : "version_date"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "hUJ2nHuo",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "USER_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EVENT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "VERSION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            } ]
+          },
+          "slug" : "deduplicated_dedup_test"
+        } ],
+        "outputs" : [ {
+          "id" : "wQnl85n8",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "USER_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EVENT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "VERSION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "VERSION_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "dbt_util_sample##bc4EPgr3" : {
+      "id" : "dbt_util_sample##bc4EPgr3",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "dbt_util_sample",
+        "x" : 420,
+        "y" : -40,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Samples data from the 'add_dbt_fx' table for utility purposes.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM add_dbt_fx\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "TlRmdis3",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "USER_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EVENT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "VERSION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "VERSION_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "VERSION_DOY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "add_dbt_fx"
+        } ],
+        "outputs" : [ {
+          "id" : "DLF9pIMI",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "USER_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EVENT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "VERSION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "VERSION_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "VERSION_DOY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "oWZKdWo8P6-LytmiieHxf" : {
+      "id" : "oWZKdWo8P6-LytmiieHxf",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "DEDUP_TEST",
+        "slug" : "DEDUP_TEST",
+        "x" : -380,
+        "y" : -40,
+        "phase" : 0,
+        "comment" : "Retrieves data from the 'BOBW.DEMO_OUTPUT' table for further analysis.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "table" : {
+          "name" : "DEDUP_TEST",
+          "sourceType" : "Source",
+          "sourceName" : "BOBW.DEMO_OUTPUT",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "V6iLPDxdYqG_qS_lC5Gjj",
+          "schema" : {
+            "providerType" : "snowflake",
+            "fields" : [ {
+              "name" : "USER_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EVENT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "VERSION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "LCsPDJDuQS1Jx6bDLAAne$$b_1vqKWL3xuervb6kOgxA" : {
+      "id" : "LCsPDJDuQS1Jx6bDLAAne$$b_1vqKWL3xuervb6kOgxA",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "add_dbt_fx",
+        "slug" : "add_dbt_fx",
+        "x" : 200,
+        "y" : -40,
+        "phase" : 0,
+        "macroDependencies" : [ "dbt_date.day_of_year" ],
+        "comment" : "Adds a new column 'version_doy' to the deduplicated events table, representing the day of the year for the version date.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "columnsSelector" : [ "be7a0uIR1AuKuCE0shnFf$$PLtGnSFWo7RNC0sA5QAV3##USER_ID", "be7a0uIR1AuKuCE0shnFf$$PLtGnSFWo7RNC0sA5QAV3##EVENT", "be7a0uIR1AuKuCE0shnFf$$PLtGnSFWo7RNC0sA5QAV3##VERSION", "be7a0uIR1AuKuCE0shnFf$$PLtGnSFWo7RNC0sA5QAV3##VERSION_DATE" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "USER_ID"
+          },
+          "alias" : "USER_ID"
+        }, {
+          "expression" : {
+            "expression" : "EVENT"
+          },
+          "alias" : "EVENT"
+        }, {
+          "expression" : {
+            "expression" : "VERSION"
+          },
+          "alias" : "VERSION"
+        }, {
+          "expression" : {
+            "expression" : "VERSION_DATE"
+          },
+          "alias" : "VERSION_DATE"
+        }, {
+          "expression" : {
+            "expression" : "{{ dbt_date.day_of_year('VERSION_DATE') }}"
+          },
+          "alias" : "version_doy"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "be7a0uIR1AuKuCE0shnFf$$PLtGnSFWo7RNC0sA5QAV3",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "USER_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EVENT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "VERSION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "VERSION_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            } ]
+          },
+          "slug" : "deduplicated_events"
+        } ],
+        "outputs" : [ {
+          "id" : "rNxHZ_FudTZkdDGHinFOv$$HUIo02jNT8Rm2mkJAPCsL",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "USER_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EVENT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "VERSION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "VERSION_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "VERSION_DOY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "deduplicated_dedup_test##GH2CJid5" : {
+      "id" : "deduplicated_dedup_test##GH2CJid5",
+      "component" : "Macro",
+      "metadata" : {
+        "label" : "dbt_deduplicate",
+        "slug" : "dbt_deduplicate",
+        "x" : -180,
+        "y" : -40,
+        "phase" : 0,
+        "macroDependencies" : [ "dbt_utils.deduplicate" ],
+        "comment" : "Deduplicates the 'DEDUP_TEST' table based on the 'USER_ID' column, keeping the most recent records.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "macroName" : "deduplicate",
+        "parameters" : [ {
+          "name" : "relation",
+          "value" : "'DEDUP_TEST'"
+        }, {
+          "name" : "partition_by",
+          "value" : "'USER_ID'"
+        }, {
+          "name" : "order_by",
+          "value" : "'DATE DESC'"
+        } ],
+        "projectName" : "dbt_utils"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "HAlPIdsG",
+          "schema" : {
+            "providerType" : "snowflake",
+            "fields" : [ {
+              "name" : "USER_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EVENT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "VERSION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            } ]
+          },
+          "slug" : "DEDUP_TEST"
+        } ],
+        "outputs" : [ {
+          "id" : "Wve7pfv2",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "USER_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EVENT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "VERSION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "jOUGZVzX",
+    "source" : "deduplicated_dedup_test##GH2CJid5",
+    "sourcePort" : "Wve7pfv2",
+    "target" : "deduplicated_events##kQQDp6F1",
+    "targetPort" : "hUJ2nHuo"
+  }, {
+    "id" : "slaP6sIM",
+    "source" : "oWZKdWo8P6-LytmiieHxf",
+    "sourcePort" : "V6iLPDxdYqG_qS_lC5Gjj",
+    "target" : "deduplicated_dedup_test##GH2CJid5",
+    "targetPort" : "HAlPIdsG"
+  }, {
+    "id" : "1K7pxv5mqexeOk30y_bAw$$dwECZt1UAae65FmMNi2OK",
+    "source" : "deduplicated_events##kQQDp6F1",
+    "sourcePort" : "wQnl85n8",
+    "target" : "LCsPDJDuQS1Jx6bDLAAne$$b_1vqKWL3xuervb6kOgxA",
+    "targetPort" : "be7a0uIR1AuKuCE0shnFf$$PLtGnSFWo7RNC0sA5QAV3"
+  }, {
+    "id" : "oACp8mFv80T-gA731T-Gq",
+    "source" : "LCsPDJDuQS1Jx6bDLAAne$$b_1vqKWL3xuervb6kOgxA",
+    "sourcePort" : "rNxHZ_FudTZkdDGHinFOv$$HUIo02jNT8Rm2mkJAPCsL",
+    "target" : "dbt_util_sample##bc4EPgr3",
+    "targetPort" : "TlRmdis3"
+  } ],
+  "component" : "Model"
+}

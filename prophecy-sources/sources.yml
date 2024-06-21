@@ -85,3 +85,37 @@ sources:
     - name: "C_COMMENT"
       dataType:
         type: "String"
+- name: "BOBW.DEMO_OUTPUT"
+  database: "BOBW"
+  schema: "DEMO_OUTPUT"
+  config:
+    enabled: true
+  tables:
+  - name: "NATIONS"
+    columns:
+    - name: "N_NATIONKEY"
+      dataType:
+        type: "Number"
+    - name: "N_NAME"
+      dataType:
+        type: "String"
+    - name: "N_REGIONKEY"
+      dataType:
+        type: "Number"
+    - name: "N_COMMENT"
+      dataType:
+        type: "String"
+  - name: "DEDUP_TEST"
+    columns:
+    - name: "USER_ID"
+      dataType:
+        type: "String"
+    - name: "EVENT"
+      dataType:
+        type: "String"
+    - name: "VERSION"
+      dataType:
+        type: "String"
+    - name: "DATE"
+      dataType:
+        type: "Date"

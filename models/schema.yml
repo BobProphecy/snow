@@ -13,4 +13,11 @@ models:
     \ can identify their top-performing customers and tailor their marketing and sales\
     \ strategies accordingly."
   columns: []
+- name: "dbt_util_sample"
+  description: "Deduplicates and transforms data from the `DEDUP_TEST` table. It creates\
+    \ a deduplicated list of events with corresponding user IDs, event types, versions,\
+    \ and dates. Additionally, it adds a new column `version_doy` representing the\
+    \ day of the year for the `VERSION_DATE`. The final result includes all columns\
+    \ from the `add_dbt_fx` table."
+  columns: []
 sources: []
