@@ -32,6 +32,7 @@ jobs:
     enabled: false
     createdAt: '2024-04-10 18:47:54'
     author: bobw@prophecy.io
+    models: []
   jobs/job2:
     name: job2
     description: ''
@@ -55,6 +56,31 @@ jobs:
     enabled: null
     createdAt: '2024-04-17 18:43:35'
     author: bobw@prophecy.io
+    models: []
+  jobs/new_test:
+    name: new_test
+    description: ''
+    fabricUID: 13760
+    scheduler:
+      Prophecy: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: 0 0 * * 1
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2024-06-28 17:08:41'
+    author: bobw@prophecy.io
+    models: []
 gemContainer:
   languageVersion: ''
   gemLibsVersion: ''

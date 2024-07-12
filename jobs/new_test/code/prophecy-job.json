@@ -1,10 +1,10 @@
 {
   "metainfo" : {
     "type" : "Prophecy",
-    "fabricId" : "11413",
-    "jobId" : "jobs/job1",
-    "name" : "job1",
-    "dagName" : "mbRylqVG5lc2duL1M70F2Q_",
+    "fabricId" : "13760",
+    "jobId" : "jobs/new_test",
+    "name" : "new_test",
+    "dagName" : "Ts5sMYsqhA75AHRUp9x7EQ_",
     "schedule" : "0 0 * * 1",
     "enabled" : false,
     "alerting" : {
@@ -15,10 +15,8 @@
     },
     "maxConcurrentRuns" : 1,
     "processDefaultSettings" : {
-      "email" : "bobw@prophecy.io",
-      "email_on_failure" : true,
       "ignore_first_depends_on_past" : true,
-      "pool" : "XL7tAWek",
+      "pool" : "2AGL95yk",
       "do_xcom_push" : true
     },
     "availableFabrics" : [ {
@@ -26,9 +24,9 @@
       "name" : "AirFlow-June",
       "trialStartDate" : 1718107529481
     } ],
-    "endDate" : "2024-05-05",
-    "catchup" : true,
-    "tags" : [ ],
+    "maxActiveRuns" : 1,
+    "endDate" : "2024-07-02",
+    "catchup" : false,
     "scheduleTimeZone" : "UTC",
     "dagParams" : {
       "instances" : {
@@ -46,22 +44,22 @@
     }
   },
   "processes" : {
-    "BkAgG4vr8Y-Oe3e9yEjB-$$xkSRZ6KAHaAY7VHizIh-u" : {
-      "id" : "BkAgG4vr8Y-Oe3e9yEjB-$$xkSRZ6KAHaAY7VHizIh-u",
+    "bFq9nBWBr5t9iM-tTOZaK$$yD3874Z6rZLQ2s1MObeoe" : {
+      "id" : "bFq9nBWBr5t9iM-tTOZaK$$yD3874Z6rZLQ2s1MObeoe",
       "component" : "Model",
       "metadata" : {
-        "label" : "sales_report_model",
-        "slug" : "sales_report_model",
-        "x" : -60,
-        "y" : -260
+        "label" : "Model_0",
+        "slug" : "Model_0",
+        "x" : 20,
+        "y" : 80
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "X5w32cMZ3e4TGXJ-xaa40$$hArICqk-ePB5vhMRbQAFi",
+          "id" : "nfiTfvQwqQ-j7gx4TUXCp$$cx9lroACl8OhivqCMwvru",
           "slug" : ""
         } ],
         "outputs" : [ {
-          "id" : "XHxOKxRmhrniR3LJl3p4H$$PkrhYeboxN1Efwh7gOdmy",
+          "id" : "pn3DzBfG1xujXnWnrF7f5$$rN7xvA0Wud6cTiBDWutet",
           "slug" : ""
         } ]
       },
@@ -75,7 +73,7 @@
         "runSeed" : false,
         "gitEntity" : "branch",
         "noPartialParse" : null,
-        "model" : "sales_report",
+        "model" : null,
         "warnErrorOptions" : null,
         "gitTokenSecret" : null,
         "state" : null,
@@ -89,8 +87,8 @@
         "runSnapshots" : false,
         "noPrint" : null,
         "quiet" : null,
-        "projectId" : "22387",
-        "runMode" : "model",
+        "projectId" : null,
+        "runMode" : "project",
         "runOnlyModel" : false,
         "favorState" : null,
         "failFast" : null,
@@ -108,8 +106,8 @@
         "noVersionCheck" : null,
         "noWriteJson" : false,
         "printerWidth" : null,
-        "sqlFabricId" : "10653",
-        "gitEntityValue" : "dev",
+        "sqlFabricId" : null,
+        "gitEntityValue" : null,
         "logFormat" : null,
         "runModelWithChildren" : false,
         "dbtProfileSecret" : null,
@@ -122,17 +120,7 @@
         "targetPath" : null,
         "threads" : null,
         "warnError" : null,
-        "currentProjectModels" : [ {
-          "label" : "sales_report",
-          "value" : "sales_report",
-          "id" : "22387/.prophecy/metadata/sqlmodels/sales_report",
-          "name" : "sales_report"
-        }, {
-          "label" : "customer_nations",
-          "value" : "customer_nations",
-          "id" : "22387/.prophecy/metadata/sqlmodels/customer_nations",
-          "name" : "customer_nations"
-        } ],
+        "currentProjectModels" : null,
         "profilesDir" : null,
         "taskId" : null,
         "logPath" : null,

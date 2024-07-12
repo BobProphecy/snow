@@ -56,7 +56,7 @@
           "expression" : ""
         },
         "activeTab" : "aggregate",
-        "columnsSelector" : [ ],
+        "columnsSelector" : [ "r2VZn0ZS##CUSTOMER_ID", "r2VZn0ZS##FULL_NAME", "r2VZn0ZS##ORDER_ID", "r2VZn0ZS##AMOUNT" ],
         "groupBy" : [ {
           "expression" : {
             "expression" : "CUSTOMER_ID"
@@ -146,6 +146,7 @@
           },
           "joinType" : "INNER"
         } ],
+        "allowSelection" : false,
         "expressions" : [ {
           "expression" : {
             "expression" : "HW_ORDERS.CUSTOMER_ID"
@@ -520,7 +521,7 @@
         "macroDependencies" : [ ]
       },
       "properties" : {
-        "columnsSelector" : [ ],
+        "columnsSelector" : [ "W399NWG0##CUSTOMER_ID", "W399NWG0##FIRST_NAME", "W399NWG0##LAST_NAME", "W399NWG0##ORDER_ID", "W399NWG0##AMOUNT" ],
         "expressions" : [ {
           "expression" : {
             "expression" : "CUSTOMER_ID"
@@ -660,7 +661,7 @@
         "macroDependencies" : [ ]
       },
       "properties" : {
-        "columnsSelector" : [ ],
+        "columnsSelector" : [ "sSM2fMuP##TOTAL_SALES" ],
         "orders" : [ {
           "expression" : {
             "expression" : "TOTAL_SALES"
