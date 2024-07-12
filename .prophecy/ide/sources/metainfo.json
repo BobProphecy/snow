@@ -614,7 +614,15 @@
     "type" : "Model",
     "syncedOnce" : false
   }, {
+    "name" : "dbt_util_sample",
+    "type" : "Model",
+    "syncedOnce" : false
+  }, {
     "name" : "sales_report",
+    "type" : "Model",
+    "syncedOnce" : false
+  }, {
+    "name" : "test_csv",
     "type" : "Model",
     "syncedOnce" : false
   } ],
