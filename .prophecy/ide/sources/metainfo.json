@@ -605,6 +605,18 @@
     "dependencies" : { },
     "prophecyProjectDependencies" : { }
   },
-  "sourcesToSync" : [ ],
+  "entitiesToSync" : [ {
+    "name" : "cpSQL",
+    "type" : "Model",
+    "syncedOnce" : false
+  }, {
+    "name" : "customer_nations",
+    "type" : "Model",
+    "syncedOnce" : false
+  }, {
+    "name" : "sales_report",
+    "type" : "Model",
+    "syncedOnce" : false
+  } ],
   "frontEndLanguage" : "sql"
 }

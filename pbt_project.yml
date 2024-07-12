@@ -32,6 +32,7 @@ jobs:
     enabled: false
     createdAt: '2024-04-10 18:47:54'
     author: bobw@prophecy.io
+    models: []
   jobs/job2:
     name: job2
     description: ''
@@ -55,6 +56,7 @@ jobs:
     enabled: null
     createdAt: '2024-04-17 18:43:35'
     author: bobw@prophecy.io
+    models: []
 gemContainer:
   languageVersion: ''
   gemLibsVersion: ''
@@ -67,6 +69,7 @@ functions:
   udafs: {}
   expressions: {}
   airflowFunctions: {}
+  businessRules: {}
 subgraphs: {}
 sqlModels:
   .prophecy/metadata/sqlmodels/cpSQL:
@@ -158,6 +161,7 @@ sqlModels:
       snapshots: []
     createdAt: '2024-04-09 13:43:30'
 sqlSnapshots: {}
+sqlTests: {}
 sqlMacros: {}
 sqlSeeds:
   .prophecy/metadata/sqlseeds/nations:
@@ -182,6 +186,31 @@ sqlSeeds:
     files:
     - seeds/nations.csv
     createdAt: '2024-04-01 15:24:59'
+  .prophecy/metadata/sqlseeds/stooges:
+    name: stooges
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: employee_id
+        dataType:
+          type: Number
+      - name: f_name
+        dataType:
+          type: String
+      - name: l_name
+        dataType:
+          type: String
+      - name: title
+        dataType:
+          type: String
+      - name: manager_id
+        dataType:
+          type: Number
+    description: null
+    author: bobw@prophecy.io
+    files:
+    - seeds/stooges.csv
+    createdAt: '2024-07-12 15:01:48'
 sqlSources:
   .prophecy/metadata/sqlsources/BOBW_HELLOWORLD:
     name: BOBW.HELLOWORLD
