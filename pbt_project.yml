@@ -96,43 +96,6 @@ functions:
   businessRules: {}
 subgraphs: {}
 sqlModels:
-  .prophecy/metadata/sqlmodels/dbt_util_sample:
-    name: dbt_util_sample
-    schema:
-      providerType: Snowflake
-      fields:
-      - name: USER_ID
-        dataType:
-          type: String
-      - name: EVENT
-        dataType:
-          type: String
-      - name: VERSION
-        dataType:
-          type: String
-      - name: VERSION_DATE
-        dataType:
-          type: Date
-      - name: VERSION_DOY
-        dataType:
-          type: Number
-    description: Deduplicates and transforms data from the `DEDUP_TEST` table. It
-      creates a deduplicated list of events with corresponding user IDs, event types,
-      versions, and dates. Additionally, it adds a new column `version_doy` representing
-      the day of the year for the `VERSION_DATE`. The final result includes all columns
-      from the `add_dbt_fx` table.
-    author: bobw@prophecy.io
-    files:
-    - models/dbt_util_sample.sql
-    - .prophecy/ide/models/dbt_util_sample.json
-    - models/schema.yml
-    sqlDependencies:
-      models: []
-      datasets: []
-      seeds: []
-      sources: []
-      snapshots: []
-    createdAt: '2024-06-21 13:28:40'
   .prophecy/metadata/sqlmodels/test_csv:
     name: test_csv
     schema:
@@ -194,32 +157,32 @@ sqlModels:
       sources: []
       snapshots: []
     createdAt: '2024-04-09 13:43:30'
-  .prophecy/metadata/sqlmodels/customer_nations:
-    name: customer_nations
+  .prophecy/metadata/sqlmodels/test12:
+    name: test12
     schema:
       providerType: Snowflake
       fields:
-      - name: N_NAME
+      - name: FULL_NAME
         dataType:
           type: String
-      - name: C_NAME
-        dataType:
-          type: String
-      - name: C_CUSTKEY
+      - name: ORDER_COUNT
         dataType:
           type: Number
+      - name: TOTAL_SALES
+        dataType:
+          type: Float
     description: null
     author: bobw@prophecy.io
     files:
-    - models/customer_nations.sql
-    - .prophecy/ide/models/customer_nations.json
+    - models/test12.sql
+    - .prophecy/ide/models/test12.json
     sqlDependencies:
       models: []
       datasets: []
       seeds: []
       sources: []
       snapshots: []
-    createdAt: '2024-04-01 15:23:32'
+    createdAt: '2024-07-12 20:10:39'
   .prophecy/metadata/sqlmodels/cpSQL:
     name: cpSQL
     schema:
@@ -253,6 +216,123 @@ sqlModels:
       sources: []
       snapshots: []
     createdAt: '2024-05-02 16:58:34'
+  .prophecy/metadata/sqlmodels/dbt_util_sample:
+    name: dbt_util_sample
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: USER_ID
+        dataType:
+          type: String
+      - name: EVENT
+        dataType:
+          type: String
+      - name: VERSION
+        dataType:
+          type: String
+      - name: VERSION_DATE
+        dataType:
+          type: Date
+      - name: VERSION_DOY
+        dataType:
+          type: Number
+    description: Deduplicates and transforms data from the `DEDUP_TEST` table. It
+      creates a deduplicated list of events with corresponding user IDs, event types,
+      versions, and dates. Additionally, it adds a new column `version_doy` representing
+      the day of the year for the `VERSION_DATE`. The final result includes all columns
+      from the `add_dbt_fx` table.
+    author: bobw@prophecy.io
+    files:
+    - models/dbt_util_sample.sql
+    - .prophecy/ide/models/dbt_util_sample.json
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-06-21 13:28:40'
+  .prophecy/metadata/sqlmodels/demo_nba:
+    name: demo_nba
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: FULL_NAME
+        dataType:
+          type: String
+      - name: TOTAL_SALES
+        dataType:
+          type: Float
+      - name: ORDER_COUNT
+        dataType:
+          type: Number
+    description: null
+    author: bobw@prophecy.io
+    files:
+    - models/demo_nba.sql
+    - .prophecy/ide/models/demo_nba.json
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-08-20 17:13:38'
+  .prophecy/metadata/sqlmodels/demo_impel:
+    name: demo_impel
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: FULL_NAME
+        dataType:
+          type: String
+      - name: TOTAL_SALES
+        dataType:
+          type: Float
+      - name: ORDER_COUNT
+        dataType:
+          type: Number
+    description: null
+    author: bobw@prophecy.io
+    files:
+    - models/demo_impel.sql
+    - .prophecy/ide/models/demo_impel.json
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-08-15 19:30:47'
+  .prophecy/metadata/sqlmodels/customer_nations:
+    name: customer_nations
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: N_NAME
+        dataType:
+          type: String
+      - name: C_NAME
+        dataType:
+          type: String
+      - name: C_CUSTKEY
+        dataType:
+          type: Number
+    description: null
+    author: bobw@prophecy.io
+    files:
+    - models/customer_nations.sql
+    - .prophecy/ide/models/customer_nations.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-04-01 15:23:32'
 sqlSnapshots: {}
 sqlTests: {}
 sqlMacros: {}
@@ -351,6 +431,79 @@ sqlSources:
       description: null
       author: bobw@prophecy.io
       createdAt: '2024-06-21 13:33:00'
+    - name: DEMO_BOB22
+      schema:
+        providerType: snowflake
+        fields:
+        - name: FULL_NAME
+          dataType:
+            type: String
+        - name: TOTAL_SALES
+          dataType:
+            type: Float
+        - name: ORDER_COUNT
+          dataType:
+            type: Number
+      description: null
+      author: bobw@prophecy.io
+      createdAt: '2024-08-15 17:19:43'
+    - name: STOOGES
+      schema:
+        providerType: snowflake
+        fields:
+        - name: EMPLOYEE_ID
+          dataType:
+            type: Number
+        - name: F_NAME
+          dataType:
+            type: String
+        - name: L_NAME
+          dataType:
+            type: String
+        - name: TITLE
+          dataType:
+            type: String
+        - name: MANAGER_ID
+          dataType:
+            type: Number
+      description: null
+      author: bobw@prophecy.io
+      createdAt: '2024-08-15 19:33:09'
+    - name: DEMO_IMPEL
+      schema:
+        providerType: snowflake
+        fields:
+        - name: FULL_NAME
+          dataType:
+            type: String
+        - name: TOTAL_SALES
+          dataType:
+            type: Float
+        - name: ORDER_COUNT
+          dataType:
+            type: Number
+      description: null
+      author: bobw@prophecy.io
+      createdAt: '2024-08-15 19:45:01'
+    - name: SALES_REPORT
+      schema:
+        providerType: snowflake
+        fields:
+        - name: CUSTOMER_ID
+          dataType:
+            type: Number
+        - name: FULL_NAME
+          dataType:
+            type: String
+        - name: ORDER_COUNT
+          dataType:
+            type: Number
+        - name: TOTAL_SALES
+          dataType:
+            type: Float
+      description: null
+      author: bobw@prophecy.io
+      createdAt: '2024-08-20 17:20:30'
   .prophecy/metadata/sqlsources/BOBW_HELLOWORLD:
     name: BOBW.HELLOWORLD
     description: null
@@ -381,7 +534,8 @@ sqlSources:
         - name: AMOUNT
           dataType:
             type: Float
-      description: null
+      description: Tracks hardware orders placed by customers, including order details
+        such as order status, category, date, and amount.
       author: bobw@prophecy.io
       createdAt: '2024-04-09 13:44:06'
     - name: HW_CUSTOMERS
@@ -412,7 +566,9 @@ sqlSources:
         - name: ACCOUNT_FLAGS
           dataType:
             type: String
-      description: null
+      description: Customer data including their personal information, contact details,
+        account details, and account flags. This dataset provides insights into customer
+        profiles and account information.
       author: bobw@prophecy.io
       createdAt: '2024-04-09 13:44:22'
   .prophecy/metadata/sqlsources/SNOWFLAKE_SAMPLE_DATA_TPCH_SF10:

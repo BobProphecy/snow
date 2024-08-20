@@ -8,49 +8,82 @@ sources:
     enabled: true
   tables:
   - name: "HW_ORDERS"
+    description: "Tracks hardware orders placed by customers, including order details\
+      \ such as order status, category, date, and amount."
     columns:
     - name: "ORDER_ID"
+      description: "The unique identifier for the order"
+      tags: []
       dataType:
         type: "Number"
     - name: "CUSTOMER_ID"
+      description: "The unique identifier of the customer who placed the order"
+      tags: []
       dataType:
         type: "Number"
     - name: "ORDER_STATUS"
+      description: "The status of the order"
+      tags: []
       dataType:
         type: "String"
     - name: "ORDER_CATEGORY"
+      description: "Category or type of the order"
+      tags: []
       dataType:
         type: "String"
     - name: "ORDER_DATE"
+      description: "The date when the order was placed"
+      tags: []
       dataType:
         type: "String"
     - name: "AMOUNT"
+      description: "The total amount of the order"
+      tags: []
       dataType:
         type: "Float"
   - name: "HW_CUSTOMERS"
+    description: "Customer data including their personal information, contact details,\
+      \ account details, and account flags. This dataset provides insights into customer\
+      \ profiles and account information."
     columns:
     - name: "CUSTOMER_ID"
+      description: "Unique identifier for the customer"
+      tags: []
       dataType:
         type: "Number"
     - name: "FIRST_NAME"
+      description: "The first name of the customer"
+      tags: []
       dataType:
         type: "String"
     - name: "LAST_NAME"
+      description: "The last name of the customer"
+      tags: []
       dataType:
         type: "String"
     - name: "PHONE"
+      description: "Phone number of the customer"
+      tags: []
       dataType:
         type: "String"
     - name: "EMAIL"
+      description: "The email address of the customer"
+      tags: []
       dataType:
         type: "String"
     - name: "COUNTRY_CODE"
+      description: "The country code associated with the customer's location"
+      tags: []
       dataType:
         type: "String"
     - name: "ACCOUNT_OPEN_DATE"
+      description: "The date when the customer's account was opened"
+      tags: []
       dataType:
         type: "String"
     - name: "ACCOUNT_FLAGS"
+      description: "Flags associated with the customer's account"
+      tags: []
       dataType:
         type: "String"
 - name: "SNOWFLAKE_SAMPLE_DATA.TPCH_SF10"
@@ -119,3 +152,56 @@ sources:
     - name: "DATE"
       dataType:
         type: "Date"
+  - name: "DEMO_BOB22"
+    columns:
+    - name: "FULL_NAME"
+      dataType:
+        type: "String"
+    - name: "TOTAL_SALES"
+      dataType:
+        type: "Float"
+    - name: "ORDER_COUNT"
+      dataType:
+        type: "Number"
+  - name: "STOOGES"
+    columns:
+    - name: "EMPLOYEE_ID"
+      dataType:
+        type: "Number"
+    - name: "F_NAME"
+      dataType:
+        type: "String"
+    - name: "L_NAME"
+      dataType:
+        type: "String"
+    - name: "TITLE"
+      dataType:
+        type: "String"
+    - name: "MANAGER_ID"
+      dataType:
+        type: "Number"
+  - name: "DEMO_IMPEL"
+    columns:
+    - name: "FULL_NAME"
+      dataType:
+        type: "String"
+    - name: "TOTAL_SALES"
+      dataType:
+        type: "Float"
+    - name: "ORDER_COUNT"
+      dataType:
+        type: "Number"
+  - name: "SALES_REPORT"
+    columns:
+    - name: "CUSTOMER_ID"
+      dataType:
+        type: "Number"
+    - name: "FULL_NAME"
+      dataType:
+        type: "String"
+    - name: "ORDER_COUNT"
+      dataType:
+        type: "Number"
+    - name: "TOTAL_SALES"
+      dataType:
+        type: "Float"

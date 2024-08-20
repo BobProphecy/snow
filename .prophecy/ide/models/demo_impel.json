@@ -1,0 +1,1506 @@
+{
+  "id" : "demo_impel",
+  "metainfo" : {
+    "label" : "demo_impel",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ {
+        "source" : {
+          "table" : {
+            "name" : "DEMO_BOB22",
+            "sourceName" : "BOBW.DEMO_OUTPUT",
+            "sourceType" : "Source"
+          }
+        },
+        "sourceComponentKind" : "Source",
+        "sourceLabel" : "DEMO_BOB22",
+        "canJoinWith" : [ {
+          "processLabel" : "DEMO_IMPEL",
+          "processId" : "v9Kw0NKtMvsOwzDYWpFtM",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "FULL_NAME", "ORDER_COUNT", "TOTAL_SALES" ],
+            "conditions" : [ {
+              "alias" : "DEMO_BOB22",
+              "expression" : {
+                "expression" : "DEMO_BOB22.FULL_NAME = DEMO_IMPEL.FULL_NAME AND DEMO_BOB22.ORDER_COUNT = DEMO_IMPEL.ORDER_COUNT AND DEMO_BOB22.TOTAL_SALES = DEMO_IMPEL.TOTAL_SALES"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "DEMO_IMPEL.FULL_NAME"
+              },
+              "alias" : "FULL_NAME"
+            }, {
+              "expression" : {
+                "expression" : "DEMO_IMPEL.TOTAL_SALES"
+              },
+              "alias" : "TOTAL_SALES"
+            }, {
+              "expression" : {
+                "expression" : "DEMO_IMPEL.ORDER_COUNT"
+              },
+              "alias" : "ORDER_COUNT"
+            } ],
+            "headAlias" : "DEMO_BOB22",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "FULL_NAME", "ORDER_COUNT", "TOTAL_SALES" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "SALES_REPORT",
+            "sourceName" : "BOBW.DEMO_OUTPUT",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "SALES_REPORT",
+        "canJoinWith" : [ {
+          "processLabel" : "DEMO_IMPEL",
+          "processId" : "v9Kw0NKtMvsOwzDYWpFtM",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "FULL_NAME", "ORDER_COUNT", "TOTAL_SALES" ],
+            "conditions" : [ {
+              "alias" : "SALES_REPORT",
+              "expression" : {
+                "expression" : "SALES_REPORT.FULL_NAME = DEMO_IMPEL.FULL_NAME AND SALES_REPORT.ORDER_COUNT = DEMO_IMPEL.ORDER_COUNT AND SALES_REPORT.TOTAL_SALES = DEMO_IMPEL.TOTAL_SALES"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "SALES_REPORT.CUSTOMER_ID"
+              },
+              "alias" : "CUSTOMER_ID"
+            }, {
+              "expression" : {
+                "expression" : "DEMO_IMPEL.FULL_NAME"
+              },
+              "alias" : "FULL_NAME"
+            }, {
+              "expression" : {
+                "expression" : "DEMO_IMPEL.TOTAL_SALES"
+              },
+              "alias" : "TOTAL_SALES"
+            }, {
+              "expression" : {
+                "expression" : "DEMO_IMPEL.ORDER_COUNT"
+              },
+              "alias" : "ORDER_COUNT"
+            } ],
+            "headAlias" : "SALES_REPORT",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "FULL_NAME", "ORDER_COUNT", "TOTAL_SALES" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "cpSQL",
+            "sourceType" : "Model"
+          }
+        },
+        "sourceComponentKind" : "Model",
+        "sourceLabel" : "cpSQL",
+        "canJoinWith" : [ {
+          "processLabel" : "DEMO_IMPEL",
+          "processId" : "v9Kw0NKtMvsOwzDYWpFtM",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "TOTAL_SALES" ],
+            "conditions" : [ {
+              "alias" : "cpSQL",
+              "expression" : {
+                "expression" : "cpSQL.TOTAL_SALES = DEMO_IMPEL.TOTAL_SALES"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "cpSQL.C_NAME"
+              },
+              "alias" : "C_NAME"
+            }, {
+              "expression" : {
+                "expression" : "DEMO_IMPEL.FULL_NAME"
+              },
+              "alias" : "FULL_NAME"
+            }, {
+              "expression" : {
+                "expression" : "DEMO_IMPEL.TOTAL_SALES"
+              },
+              "alias" : "TOTAL_SALES"
+            }, {
+              "expression" : {
+                "expression" : "DEMO_IMPEL.ORDER_COUNT"
+              },
+              "alias" : "ORDER_COUNT"
+            } ],
+            "headAlias" : "cpSQL",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "TOTAL_SALES" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "sales_report",
+            "sourceType" : "Model"
+          }
+        },
+        "sourceComponentKind" : "Model",
+        "sourceLabel" : "sales_report",
+        "canJoinWith" : [ {
+          "processLabel" : "DEMO_IMPEL",
+          "processId" : "v9Kw0NKtMvsOwzDYWpFtM",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "FULL_NAME", "ORDER_COUNT", "TOTAL_SALES" ],
+            "conditions" : [ {
+              "alias" : "sales_report",
+              "expression" : {
+                "expression" : "sales_report.FULL_NAME = DEMO_IMPEL.FULL_NAME AND sales_report.ORDER_COUNT = DEMO_IMPEL.ORDER_COUNT AND sales_report.TOTAL_SALES = DEMO_IMPEL.TOTAL_SALES"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "sales_report.CUSTOMER_ID"
+              },
+              "alias" : "CUSTOMER_ID"
+            }, {
+              "expression" : {
+                "expression" : "DEMO_IMPEL.FULL_NAME"
+              },
+              "alias" : "FULL_NAME"
+            }, {
+              "expression" : {
+                "expression" : "DEMO_IMPEL.TOTAL_SALES"
+              },
+              "alias" : "TOTAL_SALES"
+            }, {
+              "expression" : {
+                "expression" : "DEMO_IMPEL.ORDER_COUNT"
+              },
+              "alias" : "ORDER_COUNT"
+            } ],
+            "headAlias" : "sales_report",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "FULL_NAME", "ORDER_COUNT", "TOTAL_SALES" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "test12",
+            "sourceType" : "Model"
+          }
+        },
+        "sourceComponentKind" : "Model",
+        "sourceLabel" : "test12",
+        "canJoinWith" : [ {
+          "processLabel" : "DEMO_IMPEL",
+          "processId" : "v9Kw0NKtMvsOwzDYWpFtM",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "FULL_NAME", "ORDER_COUNT", "TOTAL_SALES" ],
+            "conditions" : [ {
+              "alias" : "test12",
+              "expression" : {
+                "expression" : "test12.FULL_NAME = DEMO_IMPEL.FULL_NAME AND test12.ORDER_COUNT = DEMO_IMPEL.ORDER_COUNT AND test12.TOTAL_SALES = DEMO_IMPEL.TOTAL_SALES"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "DEMO_IMPEL.FULL_NAME"
+              },
+              "alias" : "FULL_NAME"
+            }, {
+              "expression" : {
+                "expression" : "DEMO_IMPEL.TOTAL_SALES"
+              },
+              "alias" : "TOTAL_SALES"
+            }, {
+              "expression" : {
+                "expression" : "DEMO_IMPEL.ORDER_COUNT"
+              },
+              "alias" : "ORDER_COUNT"
+            } ],
+            "headAlias" : "test12",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "FULL_NAME", "ORDER_COUNT", "TOTAL_SALES" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "DEMO_BW",
+            "sourceName" : "BOBW.DEMO_OUTPUT",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "DEMO_BW",
+        "canJoinWith" : [ {
+          "processLabel" : "DEMO_IMPEL",
+          "processId" : "v9Kw0NKtMvsOwzDYWpFtM",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "FULL_NAME", "ORDER_COUNT", "TOTAL_SALES" ],
+            "conditions" : [ {
+              "alias" : "DEMO_BW",
+              "expression" : {
+                "expression" : "DEMO_BW.FULL_NAME = DEMO_IMPEL.FULL_NAME AND DEMO_BW.ORDER_COUNT = DEMO_IMPEL.ORDER_COUNT AND DEMO_BW.TOTAL_SALES = DEMO_IMPEL.TOTAL_SALES"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "DEMO_BW.CUSTOMER_ID"
+              },
+              "alias" : "CUSTOMER_ID"
+            }, {
+              "expression" : {
+                "expression" : "DEMO_IMPEL.FULL_NAME"
+              },
+              "alias" : "FULL_NAME"
+            }, {
+              "expression" : {
+                "expression" : "DEMO_IMPEL.TOTAL_SALES"
+              },
+              "alias" : "TOTAL_SALES"
+            }, {
+              "expression" : {
+                "expression" : "DEMO_IMPEL.ORDER_COUNT"
+              },
+              "alias" : "ORDER_COUNT"
+            } ],
+            "headAlias" : "DEMO_BW",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "FULL_NAME", "ORDER_COUNT", "TOTAL_SALES" ],
+          "isRecommended" : false
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "TOP_SALES",
+            "sourceName" : "BOBW.DEMO_OUTPUT",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "TOP_SALES",
+        "canJoinWith" : [ {
+          "processLabel" : "DEMO_IMPEL",
+          "processId" : "v9Kw0NKtMvsOwzDYWpFtM",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "ORDER_COUNT" ],
+            "conditions" : [ {
+              "alias" : "TOP_SALES",
+              "expression" : {
+                "expression" : "TOP_SALES.ORDER_COUNT = DEMO_IMPEL.ORDER_COUNT"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "TOP_SALES.CUSTOMER_ID"
+              },
+              "alias" : "CUSTOMER_ID"
+            }, {
+              "expression" : {
+                "expression" : "TOP_SALES.FIRST_NAME"
+              },
+              "alias" : "FIRST_NAME"
+            }, {
+              "expression" : {
+                "expression" : "TOP_SALES.LAST_NAME"
+              },
+              "alias" : "LAST_NAME"
+            }, {
+              "expression" : {
+                "expression" : "TOP_SALES.REVENUE"
+              },
+              "alias" : "REVENUE"
+            }, {
+              "expression" : {
+                "expression" : "DEMO_IMPEL.FULL_NAME"
+              },
+              "alias" : "FULL_NAME"
+            }, {
+              "expression" : {
+                "expression" : "DEMO_IMPEL.TOTAL_SALES"
+              },
+              "alias" : "TOTAL_SALES"
+            }, {
+              "expression" : {
+                "expression" : "DEMO_IMPEL.ORDER_COUNT"
+              },
+              "alias" : "ORDER_COUNT"
+            } ],
+            "headAlias" : "TOP_SALES",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "ORDER_COUNT" ],
+          "isRecommended" : false
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "TOP_SALES_2",
+            "sourceName" : "BOBW.DEMO_OUTPUT",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "TOP_SALES_2",
+        "canJoinWith" : [ {
+          "processLabel" : "DEMO_IMPEL",
+          "processId" : "v9Kw0NKtMvsOwzDYWpFtM",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "ORDER_COUNT" ],
+            "conditions" : [ {
+              "alias" : "TOP_SALES_2",
+              "expression" : {
+                "expression" : "TOP_SALES_2.ORDER_COUNT = DEMO_IMPEL.ORDER_COUNT"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "TOP_SALES_2.CUSTOMER_ID"
+              },
+              "alias" : "CUSTOMER_ID"
+            }, {
+              "expression" : {
+                "expression" : "TOP_SALES_2.FIRST_NAME"
+              },
+              "alias" : "FIRST_NAME"
+            }, {
+              "expression" : {
+                "expression" : "TOP_SALES_2.LAST_NAME"
+              },
+              "alias" : "LAST_NAME"
+            }, {
+              "expression" : {
+                "expression" : "TOP_SALES_2.REVENUE"
+              },
+              "alias" : "REVENUE"
+            }, {
+              "expression" : {
+                "expression" : "DEMO_IMPEL.FULL_NAME"
+              },
+              "alias" : "FULL_NAME"
+            }, {
+              "expression" : {
+                "expression" : "DEMO_IMPEL.TOTAL_SALES"
+              },
+              "alias" : "TOTAL_SALES"
+            }, {
+              "expression" : {
+                "expression" : "DEMO_IMPEL.ORDER_COUNT"
+              },
+              "alias" : "ORDER_COUNT"
+            } ],
+            "headAlias" : "TOP_SALES_2",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "ORDER_COUNT" ],
+          "isRecommended" : false
+        } ]
+      } ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "table",
+        "type" : "ModelConfig"
+      },
+      "userDefinedConfig" : {
+        "vars" : { }
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "demo_impel##nWZqDO4W" : {
+      "id" : "demo_impel##nWZqDO4W",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "demo_impel",
+        "x" : 1400,
+        "y" : -60,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Retrieves a specific set of limited data for demonstration purposes.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM limited_rows\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "V5eUbmf3",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "FULL_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TOTAL_SALES",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "limited_rows"
+        } ],
+        "outputs" : [ {
+          "id" : "G525k8f4",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "FULL_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TOTAL_SALES",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "bobw_helloworld_hw_customers##CoLixez5" : {
+      "id" : "bobw_helloworld_hw_customers##CoLixez5",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "bobw_helloworld_hw_customers",
+        "x" : 20,
+        "y" : 220,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "HW_CUSTOMERS",
+          "sourceType" : "Source",
+          "sourceName" : "BOBW.HELLOWORLD"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "AFNclGDX",
+          "schema" : {
+            "providerType" : "snowflake",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PHONE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EMAIL",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "COUNTRY_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ACCOUNT_OPEN_DATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ACCOUNT_FLAGS",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "total_sales_summary##pcl1yrRQ" : {
+      "id" : "total_sales_summary##pcl1yrRQ",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "total_sales_summary",
+        "x" : 860,
+        "y" : -60,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ "UnkdSAz3##FULL_NAME", "UnkdSAz3##SUM_AMOUNT", "UnkdSAz3##ORDER_COUNT" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "FULL_NAME"
+          }
+        }, {
+          "expression" : {
+            "expression" : "ROUND(SUM_AMOUNT, 2)"
+          },
+          "alias" : "TOTAL_SALES"
+        }, {
+          "expression" : {
+            "expression" : "ORDER_COUNT"
+          }
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "UnkdSAz3",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "FULL_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SUM_AMOUNT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "customer_order_summary"
+        } ],
+        "outputs" : [ {
+          "id" : "ESx5WnAY",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "FULL_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TOTAL_SALES",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "D0uLFrrawXGR64G-Amseh$$cTdtDn1MBk-jnYHolTbAp" : {
+      "id" : "D0uLFrrawXGR64G-Amseh$$cTdtDn1MBk-jnYHolTbAp",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_1",
+        "slug" : "Filter_1",
+        "x" : 780,
+        "y" : -220,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "LSCA83i3DYSjGCZu3Ft8q$$O8hFxRldzEqnRXpp6zVHJ",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "FULL_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SUM_AMOUNT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "g4C2kZgZYYdn8pKvb-nvm$$TPfUM7bL82j2YW6QWxmqg",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "FULL_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SUM_AMOUNT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "bobw_helloworld_hw_orders##AZrZ0f0e" : {
+      "id" : "bobw_helloworld_hw_orders##AZrZ0f0e",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "bobw_helloworld_hw_orders",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "HW_ORDERS",
+          "sourceType" : "Source",
+          "sourceName" : "BOBW.HELLOWORLD"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "Aj7YtoUT",
+          "schema" : {
+            "providerType" : "snowflake",
+            "fields" : [ {
+              "name" : "ORDER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ORDER_STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_CATEGORY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_DATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AMOUNT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Jo61pYsit4mZkk6Gh2oIO$$blirhOHFZxr_4ehNjDK7J" : {
+      "id" : "Jo61pYsit4mZkk6Gh2oIO$$blirhOHFZxr_4ehNjDK7J",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "order_customer_info",
+        "slug" : "order_customer_info",
+        "x" : 400,
+        "y" : 100,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Compiles customer information along with their order details for better insights.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "columnsSelector" : [ "_OKssOhRTaq5WrtPyu1VD$$EtE5vr523wFr3Npj8c_z3##CUSTOMER_ID", "_OKssOhRTaq5WrtPyu1VD$$EtE5vr523wFr3Npj8c_z3##FIRST_NAME", "_OKssOhRTaq5WrtPyu1VD$$EtE5vr523wFr3Npj8c_z3##LAST_NAME", "_OKssOhRTaq5WrtPyu1VD$$EtE5vr523wFr3Npj8c_z3##ORDER_ID", "_OKssOhRTaq5WrtPyu1VD$$EtE5vr523wFr3Npj8c_z3##AMOUNT" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID"
+        }, {
+          "expression" : {
+            "expression" : "CONCAT(FIRST_NAME, ' ', LAST_NAME)"
+          },
+          "alias" : "full_name"
+        }, {
+          "expression" : {
+            "expression" : "ORDER_ID"
+          },
+          "alias" : "ORDER_ID"
+        }, {
+          "expression" : {
+            "expression" : "AMOUNT"
+          },
+          "alias" : "AMOUNT"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "_OKssOhRTaq5WrtPyu1VD$$EtE5vr523wFr3Npj8c_z3",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "ORDER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ORDER_STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_CATEGORY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_DATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AMOUNT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PHONE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EMAIL",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "COUNTRY_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ACCOUNT_OPEN_DATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ACCOUNT_FLAGS",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "order_customer_details"
+        } ],
+        "outputs" : [ {
+          "id" : "71f6b2Tfa0BWMO2Pfjpz1$$LXWEVj8u3Msc_Prt4VpPx",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "FULL_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "AMOUNT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "total_sales_desc##sZjwAkwi" : {
+      "id" : "total_sales_desc##sZjwAkwi",
+      "component" : "OrderBy",
+      "metadata" : {
+        "label" : "total_sales_desc",
+        "x" : 1040,
+        "y" : -60,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ "SnUosBfx##TOTAL_SALES" ],
+        "orders" : [ {
+          "expression" : {
+            "expression" : "TOTAL_SALES"
+          },
+          "sortType" : "desc"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "SnUosBfx",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "FULL_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TOTAL_SALES",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "total_sales_summary"
+        } ],
+        "outputs" : [ {
+          "id" : "GIdReqL1",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "FULL_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TOTAL_SALES",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "customer_order_summary##r5jXgvDa" : {
+      "id" : "customer_order_summary##r5jXgvDa",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "customer_order_summary",
+        "x" : 600,
+        "y" : -60,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "aggregate" : [ {
+          "expression" : {
+            "expression" : "FULL_NAME"
+          }
+        }, {
+          "expression" : {
+            "expression" : "SUM(AMOUNT)"
+          },
+          "alias" : "SUM_AMOUNT"
+        }, {
+          "expression" : {
+            "expression" : "COUNT(ORDER_ID)"
+          },
+          "alias" : "ORDER_COUNT"
+        } ],
+        "allowSelection" : true,
+        "condition" : {
+          "expression" : ""
+        },
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ "QUrTR01j##FULL_NAME", "QUrTR01j##AMOUNT", "QUrTR01j##ORDER_ID" ],
+        "groupBy" : [ {
+          "expression" : {
+            "expression" : "FULL_NAME"
+          }
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "QUrTR01j",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "FULL_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "AMOUNT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            } ]
+          },
+          "slug" : "order_customer_info"
+        } ],
+        "outputs" : [ {
+          "id" : "FLtRhd8Q",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "FULL_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SUM_AMOUNT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "v9Kw0NKtMvsOwzDYWpFtM" : {
+      "id" : "v9Kw0NKtMvsOwzDYWpFtM",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "DEMO_IMPEL",
+        "slug" : "DEMO_IMPEL",
+        "x" : 640,
+        "y" : -280,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "DEMO_IMPEL",
+          "sourceType" : "Source",
+          "sourceName" : "BOBW.DEMO_OUTPUT",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "Bgfh6Q-8SZcgzF7jESk1e",
+          "schema" : {
+            "providerType" : "snowflake",
+            "fields" : [ {
+              "name" : "FULL_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TOTAL_SALES",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "limited_rows##LsaKVI1S" : {
+      "id" : "limited_rows##LsaKVI1S",
+      "component" : "Limit",
+      "metadata" : {
+        "label" : "limited_rows",
+        "x" : 1200,
+        "y" : -60,
+        "phase" : 0
+      },
+      "properties" : {
+        "limit" : {
+          "expression" : "25"
+        },
+        "fetchEnabled" : true,
+        "fetchType" : "NEXT"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "mpTpUIEM",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "FULL_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TOTAL_SALES",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "total_sales_desc"
+        } ],
+        "outputs" : [ {
+          "id" : "ikeycqPP",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "FULL_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TOTAL_SALES",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "order_customer_details##ntL5Fial" : {
+      "id" : "order_customer_details##ntL5Fial",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "order_customer_details",
+        "x" : 220,
+        "y" : 120,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "bobw_helloworld_hw_customers",
+          "expression" : {
+            "expression" : "bobw_helloworld_hw_orders.CUSTOMER_ID = bobw_helloworld_hw_customers.CUSTOMER_ID"
+          },
+          "joinType" : "INNER"
+        } ],
+        "allowSelection" : false,
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "bobw_helloworld_hw_orders.ORDER_ID"
+          }
+        }, {
+          "expression" : {
+            "expression" : "bobw_helloworld_hw_orders.CUSTOMER_ID"
+          }
+        }, {
+          "expression" : {
+            "expression" : "bobw_helloworld_hw_orders.ORDER_STATUS"
+          }
+        }, {
+          "expression" : {
+            "expression" : "bobw_helloworld_hw_orders.ORDER_CATEGORY"
+          }
+        }, {
+          "expression" : {
+            "expression" : "bobw_helloworld_hw_orders.ORDER_DATE"
+          }
+        }, {
+          "expression" : {
+            "expression" : "bobw_helloworld_hw_orders.AMOUNT"
+          }
+        }, {
+          "expression" : {
+            "expression" : "bobw_helloworld_hw_customers.FIRST_NAME"
+          }
+        }, {
+          "expression" : {
+            "expression" : "bobw_helloworld_hw_customers.LAST_NAME"
+          }
+        }, {
+          "expression" : {
+            "expression" : "bobw_helloworld_hw_customers.PHONE"
+          }
+        }, {
+          "expression" : {
+            "expression" : "bobw_helloworld_hw_customers.EMAIL"
+          }
+        }, {
+          "expression" : {
+            "expression" : "bobw_helloworld_hw_customers.COUNTRY_CODE"
+          }
+        }, {
+          "expression" : {
+            "expression" : "bobw_helloworld_hw_customers.ACCOUNT_OPEN_DATE"
+          }
+        }, {
+          "expression" : {
+            "expression" : "bobw_helloworld_hw_customers.ACCOUNT_FLAGS"
+          }
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "nd2kfkvx##CUSTOMER_ID", "RxHbmvKC##CUSTOMER_ID", "nd2kfkvx##ORDER_ID", "nd2kfkvx##CUSTOMER_ID", "nd2kfkvx##ORDER_STATUS", "nd2kfkvx##ORDER_CATEGORY", "nd2kfkvx##ORDER_DATE", "nd2kfkvx##AMOUNT", "RxHbmvKC##FIRST_NAME", "RxHbmvKC##LAST_NAME", "RxHbmvKC##PHONE", "RxHbmvKC##EMAIL", "RxHbmvKC##COUNTRY_CODE", "RxHbmvKC##ACCOUNT_OPEN_DATE", "RxHbmvKC##ACCOUNT_FLAGS" ],
+        "headAlias" : "bobw_helloworld_hw_orders"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "nd2kfkvx",
+          "schema" : {
+            "providerType" : "snowflake",
+            "fields" : [ {
+              "name" : "ORDER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ORDER_STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_CATEGORY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_DATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AMOUNT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            } ]
+          },
+          "slug" : "bobw_helloworld_hw_orders"
+        }, {
+          "id" : "RxHbmvKC",
+          "schema" : {
+            "providerType" : "snowflake",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PHONE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EMAIL",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "COUNTRY_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ACCOUNT_OPEN_DATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ACCOUNT_FLAGS",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "bobw_helloworld_hw_customers"
+        } ],
+        "outputs" : [ {
+          "id" : "oZiELaR6",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "ORDER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ORDER_STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_CATEGORY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_DATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AMOUNT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PHONE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EMAIL",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "COUNTRY_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ACCOUNT_OPEN_DATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ACCOUNT_FLAGS",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "jt2OniAU",
+    "source" : "bobw_helloworld_hw_orders##AZrZ0f0e",
+    "sourcePort" : "Aj7YtoUT",
+    "target" : "order_customer_details##ntL5Fial",
+    "targetPort" : "nd2kfkvx"
+  }, {
+    "id" : "cCCdbRVx",
+    "source" : "bobw_helloworld_hw_customers##CoLixez5",
+    "sourcePort" : "AFNclGDX",
+    "target" : "order_customer_details##ntL5Fial",
+    "targetPort" : "RxHbmvKC"
+  }, {
+    "id" : "VX7EZkiLdNiewkvqJdDul$$ugsouJ5Fawz-SNjy49hFC",
+    "source" : "order_customer_details##ntL5Fial",
+    "sourcePort" : "oZiELaR6",
+    "target" : "Jo61pYsit4mZkk6Gh2oIO$$blirhOHFZxr_4ehNjDK7J",
+    "targetPort" : "_OKssOhRTaq5WrtPyu1VD$$EtE5vr523wFr3Npj8c_z3"
+  }, {
+    "id" : "cRfVe5Yy",
+    "source" : "total_sales_summary##pcl1yrRQ",
+    "sourcePort" : "ESx5WnAY",
+    "target" : "total_sales_desc##sZjwAkwi",
+    "targetPort" : "SnUosBfx"
+  }, {
+    "id" : "CwTmbljO",
+    "source" : "total_sales_desc##sZjwAkwi",
+    "sourcePort" : "GIdReqL1",
+    "target" : "limited_rows##LsaKVI1S",
+    "targetPort" : "mpTpUIEM"
+  }, {
+    "id" : "d4FaW0Bq",
+    "source" : "Jo61pYsit4mZkk6Gh2oIO$$blirhOHFZxr_4ehNjDK7J",
+    "sourcePort" : "71f6b2Tfa0BWMO2Pfjpz1$$LXWEVj8u3Msc_Prt4VpPx",
+    "target" : "customer_order_summary##r5jXgvDa",
+    "targetPort" : "QUrTR01j"
+  }, {
+    "id" : "HnEBUs5tOkslcE4REikn9$$OS0tUaOeREs_NDOCUoFIc",
+    "source" : "limited_rows##LsaKVI1S",
+    "sourcePort" : "ikeycqPP",
+    "target" : "demo_impel##nWZqDO4W",
+    "targetPort" : "V5eUbmf3"
+  }, {
+    "id" : "KT4neJ5TgxyjA8t_c_RTk",
+    "source" : "customer_order_summary##r5jXgvDa",
+    "sourcePort" : "FLtRhd8Q",
+    "target" : "D0uLFrrawXGR64G-Amseh$$cTdtDn1MBk-jnYHolTbAp",
+    "targetPort" : "LSCA83i3DYSjGCZu3Ft8q$$O8hFxRldzEqnRXpp6zVHJ"
+  }, {
+    "id" : "OuBP8VYEgWD80xcTOj2Lg",
+    "source" : "D0uLFrrawXGR64G-Amseh$$cTdtDn1MBk-jnYHolTbAp",
+    "sourcePort" : "g4C2kZgZYYdn8pKvb-nvm$$TPfUM7bL82j2YW6QWxmqg",
+    "target" : "total_sales_summary##pcl1yrRQ",
+    "targetPort" : "UnkdSAz3"
+  } ],
+  "component" : "Model"
+}
