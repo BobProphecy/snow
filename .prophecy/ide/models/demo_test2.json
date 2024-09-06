@@ -24,8 +24,8 @@
       "component" : "TargetModel",
       "metadata" : {
         "label" : "demo_test2",
-        "x" : 620,
-        "y" : 60,
+        "x" : 460,
+        "y" : -80,
         "phase" : 0,
         "macroDependencies" : [ ],
         "isLabelGrayed" : false
@@ -59,8 +59,8 @@
       "metadata" : {
         "label" : "Subgraph_1",
         "slug" : "Subgraph_1",
-        "x" : -260,
-        "y" : -120,
+        "x" : -200,
+        "y" : -100,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
