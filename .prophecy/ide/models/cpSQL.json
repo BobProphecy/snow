@@ -37,6 +37,7 @@
         "outputs" : [ {
           "id" : "Jh2W8nhr",
           "schema" : {
+            "entityType" : "",
             "providerType" : "snowflake",
             "fields" : [ {
               "name" : "ORDER_ID",
@@ -152,6 +153,7 @@
         "inputs" : [ {
           "id" : "UPddmEml",
           "schema" : {
+            "entityType" : "",
             "providerType" : "snowflake",
             "fields" : [ {
               "name" : "ORDER_ID",
@@ -189,6 +191,7 @@
         }, {
           "id" : "VRohyAsp",
           "schema" : {
+            "entityType" : "",
             "providerType" : "snowflake",
             "fields" : [ {
               "name" : "C_CUSTKEY",
@@ -237,6 +240,7 @@
         "outputs" : [ {
           "id" : "qfGxksUc",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "ORDER_ID",
@@ -333,6 +337,7 @@
         "inputs" : [ {
           "id" : "nGChQZPG",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "ORDER_ID",
@@ -401,6 +406,7 @@
         "outputs" : [ {
           "id" : "LwvJzGbP",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NAME",
@@ -442,6 +448,7 @@
         "outputs" : [ {
           "id" : "nJxjLdgb",
           "schema" : {
+            "entityType" : "",
             "providerType" : "snowflake",
             "fields" : [ {
               "name" : "C_CUSTKEY",
@@ -529,6 +536,7 @@
         "inputs" : [ {
           "id" : "jpB4z4DE",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NAME",
@@ -547,6 +555,7 @@
         "outputs" : [ {
           "id" : "FJVLpB3F",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NAME",
@@ -587,6 +596,7 @@
         "inputs" : [ {
           "id" : "Zmnz4Qjj",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NAME",
@@ -605,6 +615,7 @@
         "outputs" : [ {
           "id" : "MPfYIIEb",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NAME",
@@ -649,6 +660,7 @@
         "inputs" : [ {
           "id" : "z6fPa7XF",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NAME",
@@ -667,6 +679,7 @@
         "outputs" : [ {
           "id" : "JZyXjK7O",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NAME",
@@ -710,6 +723,7 @@
         "inputs" : [ {
           "id" : "EZGb88mc",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NAME",
@@ -728,6 +742,7 @@
         "outputs" : [ {
           "id" : "vpIK6YgR",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "C_NAME",

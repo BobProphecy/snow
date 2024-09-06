@@ -5,7 +5,380 @@
     "autoLayout" : false,
     "staleState" : "none",
     "sourceSuggestions" : {
-      "sources" : [ ]
+      "sources" : [ {
+        "source" : {
+          "table" : {
+            "name" : "DEMO_IMPEL",
+            "sourceName" : "BOBW.DEMO_OUTPUT",
+            "sourceType" : "Source"
+          }
+        },
+        "sourceComponentKind" : "Source",
+        "sourceLabel" : "DEMO_IMPEL",
+        "canJoinWith" : [ {
+          "processLabel" : "STOOGES",
+          "processId" : "PNYDgSwAhHJ5a8jNnfVoF",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "F_NAME" ],
+            "conditions" : [ {
+              "alias" : "DEMO_IMPEL",
+              "expression" : {
+                "expression" : "DEMO_IMPEL.FULL_NAME = STOOGES.F_NAME"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "DEMO_IMPEL.TOTAL_SALES"
+              },
+              "alias" : "TOTAL_SALES"
+            }, {
+              "expression" : {
+                "expression" : "DEMO_IMPEL.ORDER_COUNT"
+              },
+              "alias" : "ORDER_COUNT"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.TITLE"
+              },
+              "alias" : "TITLE"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.MANAGER_ID"
+              },
+              "alias" : "MANAGER_ID"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.EMPLOYEE_ID"
+              },
+              "alias" : "EMPLOYEE_ID"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.F_NAME"
+              },
+              "alias" : "F_NAME"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.L_NAME"
+              },
+              "alias" : "L_NAME"
+            } ],
+            "headAlias" : "DEMO_IMPEL",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "F_NAME" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "SALES_REPORT",
+            "sourceName" : "BOBW.DEMO_OUTPUT",
+            "sourceType" : "Source"
+          }
+        },
+        "sourceComponentKind" : "Source",
+        "sourceLabel" : "SALES_REPORT",
+        "canJoinWith" : [ {
+          "processLabel" : "STOOGES",
+          "processId" : "PNYDgSwAhHJ5a8jNnfVoF",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "F_NAME" ],
+            "conditions" : [ {
+              "alias" : "SALES_REPORT",
+              "expression" : {
+                "expression" : "SALES_REPORT.FULL_NAME = STOOGES.F_NAME"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "SALES_REPORT.CUSTOMER_ID"
+              },
+              "alias" : "CUSTOMER_ID"
+            }, {
+              "expression" : {
+                "expression" : "SALES_REPORT.ORDER_COUNT"
+              },
+              "alias" : "ORDER_COUNT"
+            }, {
+              "expression" : {
+                "expression" : "SALES_REPORT.TOTAL_SALES"
+              },
+              "alias" : "TOTAL_SALES"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.TITLE"
+              },
+              "alias" : "TITLE"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.MANAGER_ID"
+              },
+              "alias" : "MANAGER_ID"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.EMPLOYEE_ID"
+              },
+              "alias" : "EMPLOYEE_ID"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.F_NAME"
+              },
+              "alias" : "F_NAME"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.L_NAME"
+              },
+              "alias" : "L_NAME"
+            } ],
+            "headAlias" : "SALES_REPORT",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "F_NAME" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "TEST",
+            "sourceName" : "BOBW.DEMO_OUTPUT",
+            "sourceType" : "Source"
+          }
+        },
+        "sourceComponentKind" : "Source",
+        "sourceLabel" : "TEST",
+        "canJoinWith" : [ {
+          "processLabel" : "STOOGES",
+          "processId" : "PNYDgSwAhHJ5a8jNnfVoF",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "EMPLOYEE_ID", "F_NAME", "L_NAME" ],
+            "conditions" : [ {
+              "alias" : "TEST",
+              "expression" : {
+                "expression" : "TEST.EMPLOYEE_ID = STOOGES.EMPLOYEE_ID AND TEST.F_NAME = STOOGES.F_NAME AND TEST.L_NAME = STOOGES.L_NAME"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "STOOGES.TITLE"
+              },
+              "alias" : "TITLE"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.MANAGER_ID"
+              },
+              "alias" : "MANAGER_ID"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.EMPLOYEE_ID"
+              },
+              "alias" : "EMPLOYEE_ID"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.F_NAME"
+              },
+              "alias" : "F_NAME"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.L_NAME"
+              },
+              "alias" : "L_NAME"
+            } ],
+            "headAlias" : "TEST",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "EMPLOYEE_ID", "F_NAME", "L_NAME" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "stooges",
+            "sourceType" : "Seed"
+          }
+        },
+        "sourceComponentKind" : "Seed",
+        "sourceLabel" : "stooges",
+        "canJoinWith" : [ {
+          "processLabel" : "STOOGES",
+          "processId" : "PNYDgSwAhHJ5a8jNnfVoF",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "EMPLOYEE_ID", "F_NAME", "L_NAME" ],
+            "conditions" : [ {
+              "alias" : "stooges",
+              "expression" : {
+                "expression" : "stooges.employee_id = STOOGES.EMPLOYEE_ID AND stooges.f_name = STOOGES.F_NAME AND stooges.l_name = STOOGES.L_NAME"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "stooges.title"
+              },
+              "alias" : "title"
+            }, {
+              "expression" : {
+                "expression" : "stooges.manager_id"
+              },
+              "alias" : "manager_id"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.TITLE"
+              },
+              "alias" : "TITLE"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.MANAGER_ID"
+              },
+              "alias" : "MANAGER_ID"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.EMPLOYEE_ID"
+              },
+              "alias" : "EMPLOYEE_ID"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.F_NAME"
+              },
+              "alias" : "F_NAME"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.L_NAME"
+              },
+              "alias" : "L_NAME"
+            } ],
+            "headAlias" : "stooges",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "EMPLOYEE_ID", "F_NAME", "L_NAME" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "test_csv",
+            "sourceType" : "Model"
+          }
+        },
+        "sourceComponentKind" : "Model",
+        "sourceLabel" : "test_csv",
+        "canJoinWith" : [ {
+          "processLabel" : "STOOGES",
+          "processId" : "PNYDgSwAhHJ5a8jNnfVoF",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "EMPLOYEE_ID", "F_NAME", "L_NAME" ],
+            "conditions" : [ {
+              "alias" : "test_csv",
+              "expression" : {
+                "expression" : "test_csv.EMPLOYEE_ID = STOOGES.EMPLOYEE_ID AND test_csv.F_NAME = STOOGES.F_NAME AND test_csv.L_NAME = STOOGES.L_NAME"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "STOOGES.TITLE"
+              },
+              "alias" : "TITLE"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.MANAGER_ID"
+              },
+              "alias" : "MANAGER_ID"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.EMPLOYEE_ID"
+              },
+              "alias" : "EMPLOYEE_ID"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.F_NAME"
+              },
+              "alias" : "F_NAME"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.L_NAME"
+              },
+              "alias" : "L_NAME"
+            } ],
+            "headAlias" : "test_csv",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "EMPLOYEE_ID", "F_NAME", "L_NAME" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "DEMO_BOB22",
+            "sourceName" : "BOBW.DEMO_OUTPUT",
+            "sourceType" : "Source"
+          }
+        },
+        "sourceComponentKind" : "Source",
+        "sourceLabel" : "DEMO_BOB22",
+        "canJoinWith" : [ {
+          "processLabel" : "STOOGES",
+          "processId" : "PNYDgSwAhHJ5a8jNnfVoF",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "F_NAME" ],
+            "conditions" : [ {
+              "alias" : "DEMO_BOB22",
+              "expression" : {
+                "expression" : "DEMO_BOB22.FULL_NAME = STOOGES.F_NAME"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "DEMO_BOB22.TOTAL_SALES"
+              },
+              "alias" : "TOTAL_SALES"
+            }, {
+              "expression" : {
+                "expression" : "DEMO_BOB22.ORDER_COUNT"
+              },
+              "alias" : "ORDER_COUNT"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.TITLE"
+              },
+              "alias" : "TITLE"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.MANAGER_ID"
+              },
+              "alias" : "MANAGER_ID"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.EMPLOYEE_ID"
+              },
+              "alias" : "EMPLOYEE_ID"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.F_NAME"
+              },
+              "alias" : "F_NAME"
+            }, {
+              "expression" : {
+                "expression" : "STOOGES.L_NAME"
+              },
+              "alias" : "L_NAME"
+            } ],
+            "headAlias" : "DEMO_BOB22",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "F_NAME" ],
+          "isRecommended" : false
+        } ]
+      } ]
     },
     "graphConfig" : {
       "entityConfig" : {
@@ -71,6 +444,7 @@
         "inputs" : [ {
           "id" : "r2VZn0ZS",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "CUSTOMER_ID",
@@ -99,6 +473,7 @@
         "outputs" : [ {
           "id" : "B96hOJzK",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "CUSTOMER_ID",
@@ -221,6 +596,7 @@
         "inputs" : [ {
           "id" : "dl1EeCVm",
           "schema" : {
+            "entityType" : "",
             "providerType" : "snowflake",
             "fields" : [ {
               "name" : "ORDER_ID",
@@ -258,6 +634,7 @@
         }, {
           "id" : "DR4MTXs7",
           "schema" : {
+            "entityType" : "",
             "providerType" : "snowflake",
             "fields" : [ {
               "name" : "CUSTOMER_ID",
@@ -306,6 +683,7 @@
         "outputs" : [ {
           "id" : "xCkpcLKu",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "CUSTOMER_ID",
@@ -401,6 +779,7 @@
         "outputs" : [ {
           "id" : "C4kb6dMU",
           "schema" : {
+            "entityType" : "",
             "providerType" : "snowflake",
             "fields" : [ {
               "name" : "CUSTOMER_ID",
@@ -471,6 +850,7 @@
         "outputs" : [ {
           "id" : "olItqcv1",
           "schema" : {
+            "entityType" : "",
             "providerType" : "snowflake",
             "fields" : [ {
               "name" : "ORDER_ID",
@@ -548,6 +928,7 @@
         "inputs" : [ {
           "id" : "W399NWG0",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "CUSTOMER_ID",
@@ -621,6 +1002,7 @@
         "outputs" : [ {
           "id" : "vfJTHDE7",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "CUSTOMER_ID",
@@ -673,6 +1055,7 @@
         "inputs" : [ {
           "id" : "sSM2fMuP",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "CUSTOMER_ID",
@@ -701,6 +1084,7 @@
         "outputs" : [ {
           "id" : "PdOVYQVp",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "CUSTOMER_ID",
@@ -754,6 +1138,7 @@
         "inputs" : [ {
           "id" : "ld0Jj2Un",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "CUSTOMER_ID",
@@ -782,6 +1167,7 @@
         "outputs" : [ {
           "id" : "wSJDEkkP",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "CUSTOMER_ID",
@@ -831,6 +1217,7 @@
         "inputs" : [ {
           "id" : "IOvgyp2d",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "CUSTOMER_ID",
@@ -859,6 +1246,7 @@
         "outputs" : [ {
           "id" : "x98IhMjG",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "CUSTOMER_ID",

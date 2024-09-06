@@ -36,6 +36,7 @@
         "outputs" : [ {
           "id" : "hKk2REiD",
           "schema" : {
+            "entityType" : "",
             "providerType" : "snowflake",
             "fields" : [ {
               "name" : "ORDER_ID",
@@ -96,6 +97,7 @@
         "outputs" : [ {
           "id" : "oZvUKKUN",
           "schema" : {
+            "entityType" : "",
             "providerType" : "snowflake",
             "fields" : [ {
               "name" : "CUSTOMER_ID",
@@ -169,6 +171,7 @@
         "inputs" : [ {
           "id" : "ze7inEht",
           "schema" : {
+            "entityType" : "",
             "providerType" : "snowflake",
             "fields" : [ {
               "name" : "CUSTOMER_ID",
@@ -216,6 +219,7 @@
         }, {
           "id" : "UlTa27XO",
           "schema" : {
+            "entityType" : "",
             "providerType" : "snowflake",
             "fields" : [ {
               "name" : "ORDER_ID",
@@ -254,6 +258,7 @@
         "outputs" : [ {
           "id" : "XOtU5d08",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "FULL_NAME",
@@ -302,6 +307,7 @@
         "inputs" : [ {
           "id" : "VKVgT2kP",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "FULL_NAME",
@@ -325,6 +331,7 @@
         "outputs" : [ {
           "id" : "E6XMHFfZ",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "FULL_NAME",

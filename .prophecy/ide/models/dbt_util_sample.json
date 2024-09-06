@@ -47,6 +47,7 @@
         "inputs" : [ {
           "id" : "hUJ2nHuo",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "USER_ID",
@@ -75,6 +76,7 @@
         "outputs" : [ {
           "id" : "wQnl85n8",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "USER_ID",
@@ -130,6 +132,7 @@
         "inputs" : [ {
           "id" : "TlRmdis3",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "USER_ID",
@@ -163,6 +166,7 @@
         "outputs" : [ {
           "id" : "DLF9pIMI",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "USER_ID",
@@ -223,6 +227,7 @@
         "outputs" : [ {
           "id" : "V6iLPDxdYqG_qS_lC5Gjj",
           "schema" : {
+            "entityType" : "",
             "providerType" : "snowflake",
             "fields" : [ {
               "name" : "USER_ID",
@@ -298,6 +303,7 @@
         "inputs" : [ {
           "id" : "be7a0uIR1AuKuCE0shnFf$$PLtGnSFWo7RNC0sA5QAV3",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "USER_ID",
@@ -326,6 +332,7 @@
         "outputs" : [ {
           "id" : "rNxHZ_FudTZkdDGHinFOv$$HUIo02jNT8Rm2mkJAPCsL",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "USER_ID",
@@ -391,6 +398,7 @@
         "inputs" : [ {
           "id" : "HAlPIdsG",
           "schema" : {
+            "entityType" : "",
             "providerType" : "snowflake",
             "fields" : [ {
               "name" : "USER_ID",
@@ -419,6 +427,7 @@
         "outputs" : [ {
           "id" : "Wve7pfv2",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "USER_ID",

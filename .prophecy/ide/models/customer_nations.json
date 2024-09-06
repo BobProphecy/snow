@@ -40,6 +40,7 @@
         "inputs" : [ {
           "id" : "ZH8rOXxZ",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "N_NAME",
@@ -63,6 +64,7 @@
         "outputs" : [ {
           "id" : "vFyeAK26",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "N_NAME",
@@ -111,6 +113,7 @@
         "outputs" : [ {
           "id" : "HNhWXFWEGQzB0vwmHnLzv",
           "schema" : {
+            "entityType" : "",
             "providerType" : "snowflake",
             "fields" : [ {
               "name" : "C_CUSTKEY",
@@ -204,6 +207,7 @@
         "inputs" : [ {
           "id" : "XNZ_Y3rMV3CcIR-fEFyD9$$3fZQMgaAULKxQFTCDtImF",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "N_NATIONKEY",
@@ -272,6 +276,7 @@
         "outputs" : [ {
           "id" : "PcV55ROb1zkuKspjPg3pT$$EWLoBbFPhudaAAie2gPbs",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "N_NAME",
@@ -324,6 +329,7 @@
         "inputs" : [ {
           "id" : "RcjizcDG2PShn6Ae2ZFzM$$7XqKi4sEcZsP_94uwn9yh",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "n_nationkey",
@@ -351,6 +357,7 @@
         }, {
           "id" : "LcfXNJCt27G04KdyrZyrt$$lkGeY7ms4pVudy8JyLqEK",
           "schema" : {
+            "entityType" : "",
             "providerType" : "snowflake",
             "fields" : [ {
               "name" : "C_CUSTKEY",
@@ -399,6 +406,7 @@
         "outputs" : [ {
           "id" : "-F1AIaTC7atsDLydknNxj$$j-ThAmI3r4695Ja9A42iW",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "N_NATIONKEY",
@@ -490,6 +498,7 @@
         "outputs" : [ {
           "id" : "SXnNcuVZKzjNUZrIAlMUs",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "n_nationkey",

@@ -139,17 +139,26 @@ sources:
       dataType:
         type: "String"
   - name: "DEDUP_TEST"
+    description: "User event records for tracking interactions and versions over time."
     columns:
     - name: "USER_ID"
+      description: "Unique identifier for each user in the dataset"
+      tags: []
       dataType:
         type: "String"
     - name: "EVENT"
+      description: "Description of the event associated with the user"
+      tags: []
       dataType:
         type: "String"
     - name: "VERSION"
+      description: "The version of the event being recorded"
+      tags: []
       dataType:
         type: "String"
     - name: "DATE"
+      description: "The date when the event occurred"
+      tags: []
       dataType:
         type: "Date"
   - name: "DEMO_BOB22"
@@ -205,3 +214,20 @@ sources:
     - name: "TOTAL_SALES"
       dataType:
         type: "Float"
+  - name: "TEST"
+    columns:
+    - name: "EMPLOYEE_ID"
+      dataType:
+        type: "Number"
+    - name: "F_NAME"
+      dataType:
+        type: "String"
+    - name: "L_NAME"
+      dataType:
+        type: "String"
+    - name: "TITLE"
+      dataType:
+        type: "String"
+    - name: "MANAGER_ID"
+      dataType:
+        type: "Number"

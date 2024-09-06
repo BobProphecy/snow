@@ -34,6 +34,7 @@
         "inputs" : [ {
           "id" : "dzW7Uv1v",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "employee_id",
@@ -67,6 +68,7 @@
         "outputs" : [ {
           "id" : "s20Nkm8G",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "EMPLOYEE_ID",
@@ -123,6 +125,7 @@
         "outputs" : [ {
           "id" : "9e6A5IrrSYNfGOwu07fl6",
           "schema" : {
+            "entityType" : "",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "employee_id",

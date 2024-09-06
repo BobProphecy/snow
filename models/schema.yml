@@ -20,26 +20,15 @@ models:
     \ day of the year for the `VERSION_DATE`. The final result includes all columns\
     \ from the `add_dbt_fx` table."
   columns: []
-- name: "demo_impel"
+- name: "demo_test2"
   columns:
   - name: "FULL_NAME"
     dataType:
       type: "String"
-  - name: "TOTAL_SALES"
-    dataType:
-      type: "Float"
   - name: "ORDER_COUNT"
     dataType:
       type: "Number"
-- name: "demo_nba"
-  columns:
-  - name: "FULL_NAME"
-    dataType:
-      type: "String"
   - name: "TOTAL_SALES"
     dataType:
       type: "Float"
-  - name: "ORDER_COUNT"
-    dataType:
-      type: "Number"
 sources: []
