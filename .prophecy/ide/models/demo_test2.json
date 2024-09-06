@@ -24,8 +24,8 @@
       "component" : "TargetModel",
       "metadata" : {
         "label" : "demo_test2",
-        "x" : 460,
-        "y" : -80,
+        "x" : -20,
+        "y" : -100,
         "phase" : 0,
         "macroDependencies" : [ ],
         "isLabelGrayed" : false
@@ -34,7 +34,7 @@
         "customQueryDisabled" : true,
         "customQuery" : false,
         "incrementalEditorDisabled" : true,
-        "query" : "SELECT * \n\nFROM order_customer_details\n",
+        "query" : "SELECT * \n\nFROM Subgraph_1\n",
         "incrementalKey" : false,
         "incremental" : {
           "expression" : "true"
@@ -43,10 +43,150 @@
       "ports" : {
         "inputs" : [ {
           "id" : "k81279ve",
-          "slug" : "order_customer_details"
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ORDER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ORDER_STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_CATEGORY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_DATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SALES_AMOUNT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PHONE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EMAIL",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "COUNTRY_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ACCOUNT_OPEN_DATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ACCOUNT_FLAGS",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "Subgraph_1"
         } ],
         "outputs" : [ {
           "id" : "ctItJRRo",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ORDER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ORDER_STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_CATEGORY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_DATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SALES_AMOUNT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PHONE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EMAIL",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "COUNTRY_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ACCOUNT_OPEN_DATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ACCOUNT_FLAGS",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
@@ -563,6 +703,12 @@
       "canonical" : false
     }
   },
-  "connections" : [ ],
+  "connections" : [ {
+    "id" : "e4ZGn0tUEr9bJZ9ce5stl$$4pjqmKwWU-kSZ5i4zY1yG",
+    "source" : "3Ogey8fBNOk_hfNvi1uGw$$AutE4ssjrSDGbjkvJhAkz",
+    "sourcePort" : "bM4x5bOYuBXR09GAhRo0u$$CXd9XlVQpa27-CNLHrNYy",
+    "target" : "final##gAxIdhNn",
+    "targetPort" : "k81279ve"
+  } ],
   "component" : "Model"
 }

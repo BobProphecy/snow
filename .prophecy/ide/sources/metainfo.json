@@ -571,6 +571,10 @@
     "type" : "Model",
     "syncedOnce" : true
   }, {
+    "name" : "demo_test2",
+    "type" : "Model",
+    "syncedOnce" : true
+  }, {
     "name" : "sales_report",
     "type" : "Model",
     "syncedOnce" : false

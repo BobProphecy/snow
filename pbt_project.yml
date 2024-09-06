@@ -59,31 +59,6 @@ jobs:
     author: bobw@prophecy.io
     models: []
     sqlProjects: []
-  jobs/new_test:
-    name: new_test
-    description: ''
-    fabricUID: 13760
-    scheduler:
-      Prophecy: {}
-    cloudProvider: null
-    jobSize: null
-    scheduleCron: 0 0 * * 1
-    timeout: null
-    alerting:
-      emails: ''
-      onStart: false
-      onSuccess: false
-      onFailure: false
-    pipelines: []
-    jobClusterMode:
-      clusterMode:
-        Single: {}
-      clusterId: null
-    enabled: null
-    createdAt: '2024-06-28 17:08:41'
-    author: bobw@prophecy.io
-    models: []
-    sqlProjects: []
 gemContainer:
   languageVersion: ''
   gemLibsVersion: ''
@@ -172,7 +147,49 @@ sqlModels:
     createdAt: '2024-05-28 19:55:37'
   .prophecy/metadata/sqlmodels/demo_test2:
     name: demo_test2
-    schema: null
+    schema:
+      entityType: ''
+      providerType: Snowflake
+      fields:
+      - name: CUSTOMER_ID
+        dataType:
+          type: Number
+      - name: ORDER_ID
+        dataType:
+          type: Number
+      - name: ORDER_STATUS
+        dataType:
+          type: String
+      - name: ORDER_CATEGORY
+        dataType:
+          type: String
+      - name: ORDER_DATE
+        dataType:
+          type: String
+      - name: SALES_AMOUNT
+        dataType:
+          type: Float
+      - name: FIRST_NAME
+        dataType:
+          type: String
+      - name: LAST_NAME
+        dataType:
+          type: String
+      - name: PHONE
+        dataType:
+          type: String
+      - name: EMAIL
+        dataType:
+          type: String
+      - name: COUNTRY_CODE
+        dataType:
+          type: String
+      - name: ACCOUNT_OPEN_DATE
+        dataType:
+          type: String
+      - name: ACCOUNT_FLAGS
+        dataType:
+          type: String
     description: null
     author: bobw@prophecy.io
     files:

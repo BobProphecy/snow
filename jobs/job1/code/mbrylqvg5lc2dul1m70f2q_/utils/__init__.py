@@ -1,1 +1,2 @@
-from .prophecy_utils import *
+from .dbt_utils import *
+from .prophecy import *

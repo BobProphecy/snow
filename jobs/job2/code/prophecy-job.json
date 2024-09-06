@@ -27,15 +27,7 @@
         "onSuccess" : false,
         "onFailure" : false
       }
-    },
-    "availableFabrics" : [ {
-      "id" : "9769",
-      "name" : "DatabricksSQL",
-      "clusterSizes" : {
-        "default" : "prophecy_internal_jobs",
-        "availableClusterSizes" : [ "prophecy_internal_jobs" ]
-      }
-    } ]
+    }
   },
   "processes" : {
     "BYcj5351HI9A6BEICh4hD$$3Mt5nZ5k4q25d4a0149na" : {
@@ -110,13 +102,11 @@
         } ]
       },
       "settings" : {
-        "type" : "Inherited",
-        "alerting" : {
-          "emails" : "",
-          "onStart" : false,
-          "onSuccess" : false,
-          "onFailure" : false
-        }
+        "retries" : 0,
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
       },
       "properties" : {
         "execSeed" : true,

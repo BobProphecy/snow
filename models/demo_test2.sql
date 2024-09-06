@@ -54,4 +54,4 @@ WITH Subgraph_1 AS (
 
 SELECT *
 
-FROM order_customer_details
+FROM Subgraph_1
