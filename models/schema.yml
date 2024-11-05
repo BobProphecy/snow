@@ -1,18 +1,6 @@
 ---
 version: 2
 models:
-- name: "cpSQL"
-  description: "This pipeline graph provides insights into the top 15 customers with\
-    \ the highest total sales. By joining the 'HW_ORDERS' table from the 'BOBW.HELLOWORLD'\
-    \ source with the 'CUSTOMER' table from the 'SNOWFLAKE_SAMPLE_DATA.TPCH_SF10'\
-    \ source, it combines order and customer information. The resulting dataset includes\
-    \ details such as order ID, customer ID, order status, order category, order date,\
-    \ amount, customer name, customer address, customer phone number, customer account\
-    \ balance, customer market segment, and customer comments. By summarizing the\
-    \ total sales for each customer and ordering them in descending order, businesses\
-    \ can identify their top-performing customers and tailor their marketing and sales\
-    \ strategies accordingly."
-  columns: []
 - name: "dbt_util_sample"
   description: "Deduplicates and transforms data from the `DEDUP_TEST` table. It creates\
     \ a deduplicated list of events with corresponding user IDs, event types, versions,\
@@ -20,8 +8,55 @@ models:
     \ day of the year for the `VERSION_DATE`. The final result includes all columns\
     \ from the `add_dbt_fx` table."
   columns: []
-- name: "demo_test2"
+- name: "Join_SubGraph"
   columns:
+  - name: "CUSTOMER_ID"
+    dataType:
+      type: "Number"
+  - name: "FIRST_NAME"
+    dataType:
+      type: "String"
+  - name: "LAST_NAME"
+    dataType:
+      type: "String"
+  - name: "PHONE"
+    dataType:
+      type: "String"
+  - name: "EMAIL"
+    dataType:
+      type: "String"
+  - name: "COUNTRY_CODE"
+    dataType:
+      type: "String"
+  - name: "ACCOUNT_OPEN_DATE"
+    dataType:
+      type: "String"
+  - name: "ACCOUNT_FLAGS"
+    dataType:
+      type: "String"
+  - name: "ORDER_ID"
+    dataType:
+      type: "Number"
+  - name: "ORDER_STATUS"
+    dataType:
+      type: "String"
+  - name: "ORDER_CATEGORY"
+    dataType:
+      type: "String"
+  - name: "ORDER_DATE"
+    dataType:
+      type: "String"
+  - name: "SALES_AMOUNT"
+    dataType:
+      type: "Float"
+- name: "sales_report"
+  description: "Aggregates sales data by customer, summarizing total sales and order\
+    \ counts. It joins customer and order information, cleans up the data, and ranks\
+    \ the top customers based on sales, returning the top ten."
+  columns:
+  - name: "CUSTOMER_ID"
+    dataType:
+      type: "Number"
   - name: "FULL_NAME"
     dataType:
       type: "String"
@@ -31,4 +66,37 @@ models:
   - name: "TOTAL_SALES"
     dataType:
       type: "Float"
+- name: "webinar"
+  columns:
+  - name: "MANAGER_NAME"
+    dataType:
+      type: "String"
+  - name: "EMPLOYEE_ID"
+    dataType:
+      type: "String"
+  - name: "TEST"
+    dataType:
+      type: "Number"
+  - name: "EMPLOYEE_NAME"
+    dataType:
+      type: "String"
+  - name: "EMPLOYEE_START_DATE"
+    dataType:
+      type: "Date"
+  - name: "EMPLOYEE_ADDRESS"
+    dataType:
+      type: "String"
+  - name: "DEPARTMENT_NAME"
+    dataType:
+      type: "String"
+  - name: "EMPLOYMENT_LENGTH_MONTHS"
+    dataType:
+      type: "Number"
+  - name: "TRAINING_DATE"
+    dataType:
+      type: "Date"
+  - name: "TRAINING_ID"
+    dataType:
+      type: "String"
+  tests: []
 sources: []

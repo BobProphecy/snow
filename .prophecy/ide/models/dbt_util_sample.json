@@ -46,60 +46,10 @@
       "ports" : {
         "inputs" : [ {
           "id" : "hUJ2nHuo",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "USER_ID",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "EVENT",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "VERSION",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "DATE",
-              "dataType" : {
-                "type" : "Date"
-              }
-            } ]
-          },
           "slug" : "deduplicated_dedup_test"
         } ],
         "outputs" : [ {
           "id" : "wQnl85n8",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "USER_ID",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "EVENT",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "VERSION",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "VERSION_DATE",
-              "dataType" : {
-                "type" : "Date"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
@@ -131,70 +81,10 @@
       "ports" : {
         "inputs" : [ {
           "id" : "TlRmdis3",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "USER_ID",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "EVENT",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "VERSION",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "VERSION_DATE",
-              "dataType" : {
-                "type" : "Date"
-              }
-            }, {
-              "name" : "VERSION_DOY",
-              "dataType" : {
-                "type" : "Number"
-              }
-            } ]
-          },
           "slug" : "add_dbt_fx"
         } ],
         "outputs" : [ {
           "id" : "DLF9pIMI",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "USER_ID",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "EVENT",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "VERSION",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "VERSION_DATE",
-              "dataType" : {
-                "type" : "Date"
-              }
-            }, {
-              "name" : "VERSION_DOY",
-              "dataType" : {
-                "type" : "Number"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
@@ -226,31 +116,6 @@
         "inputs" : [ ],
         "outputs" : [ {
           "id" : "V6iLPDxdYqG_qS_lC5Gjj",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "snowflake",
-            "fields" : [ {
-              "name" : "USER_ID",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "EVENT",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "VERSION",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "DATE",
-              "dataType" : {
-                "type" : "Date"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
@@ -302,65 +167,10 @@
       "ports" : {
         "inputs" : [ {
           "id" : "be7a0uIR1AuKuCE0shnFf$$PLtGnSFWo7RNC0sA5QAV3",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "USER_ID",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "EVENT",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "VERSION",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "VERSION_DATE",
-              "dataType" : {
-                "type" : "Date"
-              }
-            } ]
-          },
           "slug" : "deduplicated_events"
         } ],
         "outputs" : [ {
           "id" : "rNxHZ_FudTZkdDGHinFOv$$HUIo02jNT8Rm2mkJAPCsL",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "USER_ID",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "EVENT",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "VERSION",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "VERSION_DATE",
-              "dataType" : {
-                "type" : "Date"
-              }
-            }, {
-              "name" : "VERSION_DOY",
-              "dataType" : {
-                "type" : "Number"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
@@ -397,60 +207,10 @@
       "ports" : {
         "inputs" : [ {
           "id" : "HAlPIdsG",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "snowflake",
-            "fields" : [ {
-              "name" : "USER_ID",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "EVENT",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "VERSION",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "DATE",
-              "dataType" : {
-                "type" : "Date"
-              }
-            } ]
-          },
           "slug" : "DEDUP_TEST"
         } ],
         "outputs" : [ {
           "id" : "Wve7pfv2",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "USER_ID",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "EVENT",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "VERSION",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "DATE",
-              "dataType" : {
-                "type" : "Date"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,

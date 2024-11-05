@@ -20,6 +20,10 @@
     "name" : "",
     "children" : [ {
       "type" : "Database",
+      "name" : "ADITYA",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
       "name" : "AI",
       "children" : [ ]
     }, {
@@ -42,7 +46,7 @@
         "name" : "DEMO_OUTPUT",
         "tables" : {
           "DEMO_NBA" : {
-            "entityType" : "",
+            "entityType" : "TABLE",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "FULL_NAME",
@@ -61,8 +65,78 @@
               }
             } ]
           },
+          "CUSTOMER_ORDER_VIEW" : {
+            "entityType" : "VIEW",
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PHONE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EMAIL",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "COUNTRY_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ACCOUNT_OPEN_DATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ACCOUNT_FLAGS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ORDER_STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_CATEGORY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_DATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SALES_AMOUNT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            } ]
+          },
           "STOOGES" : {
-            "entityType" : "",
+            "entityType" : "TABLE",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "EMPLOYEE_ID",
@@ -91,8 +165,28 @@
               }
             } ]
           },
+          "DEMO_BNY2" : {
+            "entityType" : "TABLE",
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "FULL_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SALES_TOTAL",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
           "TOP_SALES_2" : {
-            "entityType" : "",
+            "entityType" : "TABLE",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "CUSTOMER_ID",
@@ -122,7 +216,7 @@
             } ]
           },
           "DEMO_IMPEL" : {
-            "entityType" : "",
+            "entityType" : "TABLE",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "FULL_NAME",
@@ -142,7 +236,7 @@
             } ]
           },
           "TEST" : {
-            "entityType" : "",
+            "entityType" : "TABLE",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "EMPLOYEE_ID",
@@ -172,7 +266,7 @@
             } ]
           },
           "DEMO_BW" : {
-            "entityType" : "",
+            "entityType" : "TABLE",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "CUSTOMER_ID",
@@ -197,7 +291,7 @@
             } ]
           },
           "SALES_REPORT" : {
-            "entityType" : "",
+            "entityType" : "TABLE",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "CUSTOMER_ID",
@@ -222,7 +316,7 @@
             } ]
           },
           "DEMO_BOB22" : {
-            "entityType" : "",
+            "entityType" : "TABLE",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "FULL_NAME",
@@ -242,7 +336,7 @@
             } ]
           },
           "CUSTOMER_NATIONS" : {
-            "entityType" : "",
+            "entityType" : "TABLE",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "N_NAME",
@@ -262,7 +356,7 @@
             } ]
           },
           "DEDUP_TEST" : {
-            "entityType" : "",
+            "entityType" : "TABLE",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "USER_ID",
@@ -287,7 +381,7 @@
             } ]
           },
           "RBC_CUST_TARGET" : {
-            "entityType" : "",
+            "entityType" : "TABLE",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "CUSTOMER_ID",
@@ -331,8 +425,53 @@
               }
             } ]
           },
+          "WEBINAR_10" : {
+            "entityType" : "TABLE",
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "DEPARTMENT_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "MANAGER_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TRAINING_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TRAINING_DATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EMPLOYEE_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EMPLOYEE_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EMPLOYEE_ADDRESS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EMPLOYEE_START_DATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
           "TOP_SALES" : {
-            "entityType" : "",
+            "entityType" : "TABLE",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "CUSTOMER_ID",
@@ -361,8 +500,48 @@
               }
             } ]
           },
+          "DEMO_OPTUM" : {
+            "entityType" : "TABLE",
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "FULLNAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TOTAL_SALES",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "DEMO_BNY" : {
+            "entityType" : "TABLE",
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "FULL_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "TOTAL_SALES",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
           "NATIONS" : {
-            "entityType" : "",
+            "entityType" : "TABLE",
             "providerType" : "Snowflake",
             "fields" : [ {
               "name" : "N_NATIONKEY",
@@ -454,6 +633,10 @@
       "children" : [ ]
     }, {
       "type" : "Database",
+      "name" : "KHAGESH",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
       "name" : "KISHORE",
       "children" : [ ]
     }, {
@@ -471,6 +654,14 @@
     }, {
       "type" : "Database",
       "name" : "MEITEST",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "MY_TEST_DB",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "NITHESHTESTDB",
       "children" : [ ]
     }, {
       "type" : "Database",
@@ -494,6 +685,10 @@
       "children" : [ ]
     }, {
       "type" : "Database",
+      "name" : "QA_TEST",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
       "name" : "QA_UPLOAD_TABLES",
       "children" : [ ]
     }, {
@@ -506,7 +701,15 @@
       "children" : [ ]
     }, {
       "type" : "Database",
+      "name" : "RAKSHAK",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
       "name" : "RJ",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "ROHIT",
       "children" : [ ]
     }, {
       "type" : "Database",
@@ -519,6 +722,10 @@
     }, {
       "type" : "Database",
       "name" : "SNOWFLAKE_SAMPLE_DATA",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "TEST",
       "children" : [ ]
     }, {
       "type" : "Database",
@@ -552,6 +759,10 @@
       "type" : "Database",
       "name" : "\"qa_database_lower_case_only\"",
       "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "\"tESt\"",
+      "children" : [ ]
     } ]
   },
   "dependenciesContainer" : {
@@ -559,10 +770,6 @@
     "prophecyProjectDependencies" : { }
   },
   "entitiesToSync" : [ {
-    "name" : "cpSQL",
-    "type" : "Model",
-    "syncedOnce" : true
-  }, {
     "name" : "customer_nations",
     "type" : "Model",
     "syncedOnce" : false
@@ -570,14 +777,6 @@
     "name" : "dbt_util_sample",
     "type" : "Model",
     "syncedOnce" : true
-  }, {
-    "name" : "demo_test2",
-    "type" : "Model",
-    "syncedOnce" : true
-  }, {
-    "name" : "sales_report",
-    "type" : "Model",
-    "syncedOnce" : false
   }, {
     "name" : "test12",
     "type" : "Model",

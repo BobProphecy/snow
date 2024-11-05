@@ -35,41 +35,6 @@
         "inputs" : [ ],
         "outputs" : [ {
           "id" : "hKk2REiD",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "snowflake",
-            "fields" : [ {
-              "name" : "ORDER_ID",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "CUSTOMER_ID",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "ORDER_STATUS",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "ORDER_CATEGORY",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "ORDER_DATE",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "AMOUNT",
-              "dataType" : {
-                "type" : "Float"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
@@ -96,51 +61,6 @@
         "inputs" : [ ],
         "outputs" : [ {
           "id" : "oZvUKKUN",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "snowflake",
-            "fields" : [ {
-              "name" : "CUSTOMER_ID",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "FIRST_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "LAST_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "PHONE",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "EMAIL",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "COUNTRY_CODE",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "ACCOUNT_OPEN_DATE",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "ACCOUNT_FLAGS",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
@@ -170,113 +90,13 @@
       "ports" : {
         "inputs" : [ {
           "id" : "ze7inEht",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "snowflake",
-            "fields" : [ {
-              "name" : "CUSTOMER_ID",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "FIRST_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "LAST_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "PHONE",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "EMAIL",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "COUNTRY_CODE",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "ACCOUNT_OPEN_DATE",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "ACCOUNT_FLAGS",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "c"
         }, {
           "id" : "UlTa27XO",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "snowflake",
-            "fields" : [ {
-              "name" : "ORDER_ID",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "CUSTOMER_ID",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "ORDER_STATUS",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "ORDER_CATEGORY",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "ORDER_DATE",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "AMOUNT",
-              "dataType" : {
-                "type" : "Float"
-              }
-            } ]
-          },
           "slug" : "o"
         } ],
         "outputs" : [ {
           "id" : "XOtU5d08",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "FULL_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "ORDER_COUNT",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "TOTAL_SALES",
-              "dataType" : {
-                "type" : "Float"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
@@ -306,50 +126,10 @@
       "ports" : {
         "inputs" : [ {
           "id" : "VKVgT2kP",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "FULL_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "ORDER_COUNT",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "TOTAL_SALES",
-              "dataType" : {
-                "type" : "Float"
-              }
-            } ]
-          },
           "slug" : "sales_by_customer"
         } ],
         "outputs" : [ {
           "id" : "E6XMHFfZ",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "FULL_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "ORDER_COUNT",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "TOTAL_SALES",
-              "dataType" : {
-                "type" : "Float"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,

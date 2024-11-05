@@ -39,50 +39,10 @@
       "ports" : {
         "inputs" : [ {
           "id" : "ZH8rOXxZ",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "N_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_CUSTKEY",
-              "dataType" : {
-                "type" : "Number"
-              }
-            } ]
-          },
           "slug" : "customer_nations_group_by_nation"
         } ],
         "outputs" : [ {
           "id" : "vFyeAK26",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "N_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_CUSTKEY",
-              "dataType" : {
-                "type" : "Number"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
@@ -112,51 +72,6 @@
         "inputs" : [ ],
         "outputs" : [ {
           "id" : "HNhWXFWEGQzB0vwmHnLzv",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "snowflake",
-            "fields" : [ {
-              "name" : "C_CUSTKEY",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "C_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_ADDRESS",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_NATIONKEY",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "C_PHONE",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_ACCTBAL",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "C_MKTSEGMENT",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_COMMENT",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
@@ -206,95 +121,10 @@
       "ports" : {
         "inputs" : [ {
           "id" : "XNZ_Y3rMV3CcIR-fEFyD9$$3fZQMgaAULKxQFTCDtImF",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "N_NATIONKEY",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "N_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "N_REGIONKEY",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "N_COMMENT",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_CUSTKEY",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "C_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_ADDRESS",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_NATIONKEY",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "C_PHONE",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_ACCTBAL",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "C_MKTSEGMENT",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_COMMENT",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "CUSTOMER_nations"
         } ],
         "outputs" : [ {
           "id" : "PcV55ROb1zkuKspjPg3pT$$EWLoBbFPhudaAAie2gPbs",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "N_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_CUSTKEY",
-              "dataType" : {
-                "type" : "Number"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
@@ -328,148 +158,13 @@
       "ports" : {
         "inputs" : [ {
           "id" : "RcjizcDG2PShn6Ae2ZFzM$$7XqKi4sEcZsP_94uwn9yh",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "n_nationkey",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "n_name",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "n_regionkey",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "n_comment",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "nations"
         }, {
           "id" : "LcfXNJCt27G04KdyrZyrt$$lkGeY7ms4pVudy8JyLqEK",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "snowflake",
-            "fields" : [ {
-              "name" : "C_CUSTKEY",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "C_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_ADDRESS",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_NATIONKEY",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "C_PHONE",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_ACCTBAL",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "C_MKTSEGMENT",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_COMMENT",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "CUSTOMER"
         } ],
         "outputs" : [ {
           "id" : "-F1AIaTC7atsDLydknNxj$$j-ThAmI3r4695Ja9A42iW",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "N_NATIONKEY",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "N_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "N_REGIONKEY",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "N_COMMENT",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_CUSTKEY",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "C_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_ADDRESS",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_NATIONKEY",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "C_PHONE",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_ACCTBAL",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "C_MKTSEGMENT",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "C_COMMENT",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
@@ -497,31 +192,6 @@
         "inputs" : [ ],
         "outputs" : [ {
           "id" : "SXnNcuVZKzjNUZrIAlMUs",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "n_nationkey",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "n_name",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "n_regionkey",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "n_comment",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,

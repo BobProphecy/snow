@@ -33,70 +33,10 @@
       "ports" : {
         "inputs" : [ {
           "id" : "dzW7Uv1v",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "employee_id",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "f_name",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "l_name",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "title",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "manager_id",
-              "dataType" : {
-                "type" : "Number"
-              }
-            } ]
-          },
           "slug" : "stooges"
         } ],
         "outputs" : [ {
           "id" : "s20Nkm8G",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "EMPLOYEE_ID",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "F_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "L_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "TITLE",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "MANAGER_ID",
-              "dataType" : {
-                "type" : "Number"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
@@ -124,36 +64,6 @@
         "inputs" : [ ],
         "outputs" : [ {
           "id" : "9e6A5IrrSYNfGOwu07fl6",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "employee_id",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "f_name",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "l_name",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "title",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "manager_id",
-              "dataType" : {
-                "type" : "Number"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,

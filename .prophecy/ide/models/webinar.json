@@ -1,0 +1,57 @@
+{
+  "id" : "webinar",
+  "metainfo" : {
+    "label" : "webinar",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "table",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "webinar##Rg5or9dl" : {
+      "id" : "webinar##Rg5or9dl",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "webinar",
+        "x" : 20,
+        "y" : -360,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Accesses all information related to employee training programs.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM employee_training_details\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Io9dCoKe",
+          "slug" : "employee_training_details"
+        } ],
+        "outputs" : [ {
+          "id" : "lE4njqbO",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ ],
+  "component" : "Model"
+}
