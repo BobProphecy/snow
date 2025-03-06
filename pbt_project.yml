@@ -172,7 +172,22 @@ sqlModels:
     createdAt: '2024-05-28 19:55:37'
   .prophecy/metadata/sqlmodels/demo_new_sql:
     name: demo_new_sql
-    schema: null
+    schema:
+      entityType: ''
+      providerType: Snowflake
+      fields:
+      - name: FULL_NAME
+        dataType:
+          type: String
+      - name: COMPANY_NAME
+        dataType:
+          type: Variant
+      - name: TOTAL_SALES
+        dataType:
+          type: Float
+      - name: ORDER_COUNT
+        dataType:
+          type: Number
     description: Aggregates and summarizes sales data by customer, providing insights
       into total sales and order counts. It combines customer and order information,
       formats names, and extracts company domains from email addresses. The final
