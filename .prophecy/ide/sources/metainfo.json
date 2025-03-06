@@ -8,7 +8,6 @@
     "editable" : true
   },
   "providerType" : "snowflake",
-  "fabricId" : "10653",
   "prophecyIDEFolder" : {
     "name" : "",
     "children" : { },
@@ -45,26 +44,6 @@
         "type" : "Schema",
         "name" : "DEMO_OUTPUT",
         "tables" : {
-          "DEMO_NBA" : {
-            "entityType" : "TABLE",
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "FULL_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "TOTAL_SALES",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "ORDER_COUNT",
-              "dataType" : {
-                "type" : "Number"
-              }
-            } ]
-          },
           "CUSTOMER_ORDER_VIEW" : {
             "entityType" : "VIEW",
             "providerType" : "Snowflake",
@@ -165,26 +144,6 @@
               }
             } ]
           },
-          "DEMO_BNY2" : {
-            "entityType" : "TABLE",
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "FULL_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "SALES_TOTAL",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "ORDER_COUNT",
-              "dataType" : {
-                "type" : "Number"
-              }
-            } ]
-          },
           "TOP_SALES_2" : {
             "entityType" : "TABLE",
             "providerType" : "Snowflake",
@@ -205,26 +164,6 @@
               }
             }, {
               "name" : "REVENUE",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "ORDER_COUNT",
-              "dataType" : {
-                "type" : "Number"
-              }
-            } ]
-          },
-          "DEMO_IMPEL" : {
-            "entityType" : "TABLE",
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "FULL_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "TOTAL_SALES",
               "dataType" : {
                 "type" : "Float"
               }
@@ -265,31 +204,6 @@
               }
             } ]
           },
-          "DEMO_BW" : {
-            "entityType" : "TABLE",
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "CUSTOMER_ID",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "FULL_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "ORDER_COUNT",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "TOTAL_SALES",
-              "dataType" : {
-                "type" : "Float"
-              }
-            } ]
-          },
           "SALES_REPORT" : {
             "entityType" : "TABLE",
             "providerType" : "Snowflake",
@@ -315,7 +229,7 @@
               }
             } ]
           },
-          "DEMO_BOB22" : {
+          "DEMO_BNY1" : {
             "entityType" : "TABLE",
             "providerType" : "Snowflake",
             "fields" : [ {
@@ -355,28 +269,23 @@
               }
             } ]
           },
-          "DEDUP_TEST" : {
-            "entityType" : "TABLE",
+          "DEMO_TEST1_VIEW" : {
+            "entityType" : "VIEW",
             "providerType" : "Snowflake",
             "fields" : [ {
-              "name" : "USER_ID",
+              "name" : "FULL_NAME",
               "dataType" : {
                 "type" : "String"
               }
             }, {
-              "name" : "EVENT",
+              "name" : "TOTAL_SALES",
               "dataType" : {
-                "type" : "String"
+                "type" : "Float"
               }
             }, {
-              "name" : "VERSION",
+              "name" : "ORDER_COUNT",
               "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "DATE",
-              "dataType" : {
-                "type" : "Date"
+                "type" : "Number"
               }
             } ]
           },
@@ -500,46 +409,6 @@
               }
             } ]
           },
-          "DEMO_OPTUM" : {
-            "entityType" : "TABLE",
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "FULLNAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "TOTAL_SALES",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "ORDER_COUNT",
-              "dataType" : {
-                "type" : "Number"
-              }
-            } ]
-          },
-          "DEMO_BNY" : {
-            "entityType" : "TABLE",
-            "providerType" : "Snowflake",
-            "fields" : [ {
-              "name" : "FULL_NAME",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "TOTAL_SALES",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "ORDER_COUNT",
-              "dataType" : {
-                "type" : "Number"
-              }
-            } ]
-          },
           "NATIONS" : {
             "entityType" : "TABLE",
             "providerType" : "Snowflake",
@@ -579,6 +448,10 @@
         "name" : "PUBLIC",
         "children" : [ ]
       } ]
+    }, {
+      "type" : "Database",
+      "name" : "BUG_REPRO",
+      "children" : [ ]
     }, {
       "type" : "Database",
       "name" : "CHETAN",
@@ -657,6 +530,10 @@
       "children" : [ ]
     }, {
       "type" : "Database",
+      "name" : "MIKE_T",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
       "name" : "MY_TEST_DB",
       "children" : [ ]
     }, {
@@ -674,6 +551,10 @@
     }, {
       "type" : "Database",
       "name" : "PPIYUSH_TEST",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "PRAKHAR_DB",
       "children" : [ ]
     }, {
       "type" : "Database",
@@ -709,6 +590,14 @@
       "children" : [ ]
     }, {
       "type" : "Database",
+      "name" : "RJ_DEV",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "RJ_PROD",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
       "name" : "ROHIT",
       "children" : [ ]
     }, {
@@ -725,15 +614,63 @@
       "children" : [ ]
     }, {
       "type" : "Database",
+      "name" : "SONY",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "SOURCES_DB",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "SREERAM",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "SYNTHETIC_DATA",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "SYNTHETIC_DATA_DIRTY",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "SYNTHETIC_DATA_EDUCATION",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "SYNTHETIC_DATA_FINANCE",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "SYNTHETIC_DATA_HEALTHCARE",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "SYNTHETIC_DATA_MANUFACTURING",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "SYNTHETIC_DATA_MEDIUM_DIRTY",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "SYNTHETIC_DATA_RETAIL",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "SYNTHETIC_DATA_TECHNOLOGY",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "TANMAY",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
       "name" : "TEST",
       "children" : [ ]
     }, {
       "type" : "Database",
       "name" : "TESTING",
-      "children" : [ ]
-    }, {
-      "type" : "Database",
-      "name" : "TOM",
       "children" : [ ]
     }, {
       "type" : "Database",
@@ -749,19 +686,19 @@
       "children" : [ ]
     }, {
       "type" : "Database",
-      "name" : "\"jaffle_shop\"",
+      "name" : "jaffle_shop",
       "children" : [ ]
     }, {
       "type" : "Database",
-      "name" : "\"qa_database\"",
+      "name" : "qa_database",
       "children" : [ ]
     }, {
       "type" : "Database",
-      "name" : "\"qa_database_lower_case_only\"",
+      "name" : "qa_database_lower_case_only",
       "children" : [ ]
     }, {
       "type" : "Database",
-      "name" : "\"tESt\"",
+      "name" : "tESt",
       "children" : [ ]
     } ]
   },
@@ -775,6 +712,10 @@
     "syncedOnce" : false
   }, {
     "name" : "dbt_util_sample",
+    "type" : "Model",
+    "syncedOnce" : true
+  }, {
+    "name" : "Join_SubGraph",
     "type" : "Model",
     "syncedOnce" : true
   }, {

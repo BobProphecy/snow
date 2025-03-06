@@ -66,37 +66,20 @@ models:
   - name: "TOTAL_SALES"
     dataType:
       type: "Float"
-- name: "webinar"
+- name: "demo_new_sql"
+  description: "Aggregates and summarizes sales data by customer, providing insights\
+    \ into total sales and order counts. It combines customer and order information,\
+    \ formats names, and extracts company domains from email addresses. The final\
+    \ output presents the top 50 customers based on total sales."
   columns:
-  - name: "MANAGER_NAME"
+  - name: "FULL_NAME"
     dataType:
       type: "String"
-  - name: "EMPLOYEE_ID"
+  - name: "TOTAL_SALES"
     dataType:
-      type: "String"
-  - name: "TEST"
+      type: "Float"
+  - name: "ORDER_COUNT"
     dataType:
       type: "Number"
-  - name: "EMPLOYEE_NAME"
-    dataType:
-      type: "String"
-  - name: "EMPLOYEE_START_DATE"
-    dataType:
-      type: "Date"
-  - name: "EMPLOYEE_ADDRESS"
-    dataType:
-      type: "String"
-  - name: "DEPARTMENT_NAME"
-    dataType:
-      type: "String"
-  - name: "EMPLOYMENT_LENGTH_MONTHS"
-    dataType:
-      type: "Number"
-  - name: "TRAINING_DATE"
-    dataType:
-      type: "Date"
-  - name: "TRAINING_ID"
-    dataType:
-      type: "String"
   tests: []
 sources: []

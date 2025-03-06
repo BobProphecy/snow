@@ -22,17 +22,22 @@ runner = dbtRunner()
 
 
 def execute_dbt_cmd(command):
-    try:
-        response = runner.invoke(command.split()[1:])
-        if response.success:
-            LOG.info(f"command %s and result %s", command, response.result)
-            return response.result
-        else:
-            raise response.exception
+    LOG.info("Running dbt command %s", command)
+    response = runner.invoke(command.split()[1:])
+    LOG.info(f"command %s and response %s", command, str(response))
+    if response.success:
+        return response.result
+    elif response.exception:
+        raise response.exception
+    else:
+        results = getattr(response.result, 'results', [getattr(response.result, 'result', None)])
+        results = [x for x in results if x is not None]
+        for result in results:
+            if str(result.status) == 'error':
+                raise Exception(result.message)
+        return results
 
-    except Exception as e:
-        LOG.error(f"Error running dbt command {command}", str(e))
-        raise e
+
 
 
 ## extract dependency of same package only.
@@ -285,7 +290,7 @@ def invoke_dbt_runner(run_mode, entity_kind, entity_name, run_deps,
                     git_ssh_url, temp_folder, git_entity_value
                 )
 
-            project_folder = f"{temp_folder}/{git_sub_path}" if git_sub_path is not "" or None else temp_folder
+            project_folder = f"{temp_folder}/{git_sub_path}" if git_sub_path else temp_folder
             cmd_list = [git_cmd]
             command_runner(cmd_list)
             cmd_list = []
